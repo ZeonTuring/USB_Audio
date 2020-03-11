@@ -1,0 +1,2 @@
+gpio_custom.c:10:6:GPIO_InitPin	24	static
+gpio_custom.c:50:6:GPIO_SetPin	24	static

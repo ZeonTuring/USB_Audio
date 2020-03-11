@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=DAC_DGND Pin=NT1-2
+Removed Member From Class: ClassName=U_Power Member=NT1
+Added Pin To Net: NetName=DAC_DGND Pin=C63-2
+Added Pin To Net: NetName=DAC_DGND Pin=C64-1
+Added Pin To Net: NetName=DAC_DGND Pin=C67-2
+Added Pin To Net: NetName=DAC_DGND Pin=R37-1
+Added Pin To Net: NetName=DAC_DGND Pin=U12-19

@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=OUTL_P Pin=U2-25
+Removed Pin From Net: NetName=OUTL_N Pin=U2-26
+Added Pin To Net: NetName=OUTL_N Pin=U2-25
+Added Pin To Net: NetName=OUTL_P Pin=U2-26
+Change Net Name : Old Net Name=OUTL_N New Net Name=OUTL_P
+Change Net Name : Old Net Name=OUTL_P New Net Name=OUTL_N

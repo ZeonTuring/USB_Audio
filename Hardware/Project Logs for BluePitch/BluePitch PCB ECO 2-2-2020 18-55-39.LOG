@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=DAC_DGND Pin=U2-24
+Added Pin To Net: NetName=DAC_AGND Pin=U2-24

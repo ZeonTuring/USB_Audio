@@ -1,0 +1,31 @@
+Added Component: Designator=NT2(NT_20)
+Add component. Clean all parameters for all variants
+Added Component: Designator=NT3(NT_20)
+Add component. Clean all parameters for all variants
+Added Component: Designator=NT4(NT_20)
+Add component. Clean all parameters for all variants
+Added Component: Designator=NT5(NT_20)
+Add component. Clean all parameters for all variants
+Added Component: Designator=NT6(NT_10)
+Add component. Clean all parameters for all variants
+Added Component: Designator=NT7(NT_10)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=DAC_DGND Pin=NT2-1
+Added Pin To Net: NetName=PAGND Pin=NT2-2
+Added Pin To Net: NetName=DAC_DGND Pin=NT3-1
+Added Pin To Net: NetName=PAGND Pin=NT3-2
+Added Pin To Net: NetName=DAC_DGND Pin=NT4-1
+Added Pin To Net: NetName=DAC_AGND Pin=NT4-2
+Added Pin To Net: NetName=PAGND Pin=NT5-1
+Added Pin To Net: NetName=AMP_AGND Pin=NT5-2
+Added Pin To Net: NetName=DAC_AGND Pin=NT6-1
+Added Pin To Net: NetName=AMP_AGND Pin=NT6-2
+Added Pin To Net: NetName=DAC_AGND Pin=NT7-1
+Added Pin To Net: NetName=AMP_AGND Pin=NT7-2
+Change Net Name : Old Net Name=DAC_AGND New Net Name=AGND
+Added Member To Class: ClassName=BluePitch Member=Component NT2 NetTie
+Added Member To Class: ClassName=BluePitch Member=Component NT3 NetTie
+Added Member To Class: ClassName=BluePitch Member=Component NT4 NetTie
+Added Member To Class: ClassName=BluePitch Member=Component NT5 NetTie
+Added Member To Class: ClassName=BluePitch Member=Component NT6 NetTie
+Added Member To Class: ClassName=BluePitch Member=Component NT7 NetTie

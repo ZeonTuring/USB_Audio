@@ -1,0 +1,289 @@
+Removed Pin From Net: NetName=PAGND Pin=C48-1
+Removed Pin From Net: NetName=AVCCL_5V Pin=C49-2
+Removed Pin From Net: NetName=PAGND Pin=C52-1
+Removed Pin From Net: NetName=PAGND Pin=C53-1
+Removed Pin From Net: NetName=PAGND Pin=C54-1
+Removed Pin From Net: NetName=PAGND Pin=C55-1
+Removed Pin From Net: NetName=DAC_DGND Pin=C56-K
+Removed Pin From Net: NetName=DAC_DGND Pin=C57-1
+Removed Pin From Net: NetName=DAC_DGND Pin=C58-1
+Removed Pin From Net: NetName=VCC Pin=C58-2
+Removed Pin From Net: NetName=VCC Pin=C59-1
+Removed Pin From Net: NetName=DAC_DGND Pin=C59-2
+Removed Pin From Net: NetName=VCC Pin=L1-2
+Removed Pin From Net: NetName=DAC_DGND Pin=NT1-1
+Removed Pin From Net: NetName=PAGND Pin=NT2-2
+Removed Pin From Net: NetName=PAGND Pin=NT3-2
+Removed Pin From Net: NetName=PAGND Pin=NT4-1
+Removed Pin From Net: NetName=PAGND Pin=NT5-1
+Removed Pin From Net: NetName=AMP_AGND Pin=NT5-2
+Removed Pin From Net: NetName=AMP_AGND Pin=NT6-2
+Removed Pin From Net: NetName=AMP_AGND Pin=NT7-2
+Removed Pin From Net: NetName=AMP_AGND Pin=P4-4
+Removed Pin From Net: NetName=PAGND Pin=R27-2
+Removed Pin From Net: NetName=PAGND Pin=R28-2
+Removed Pin From Net: NetName=DAC_DGND Pin=R30-1
+Removed Pin From Net: NetName=AVCCL_5V Pin=U7-9
+Removed Pin From Net: NetName=AVCCL_5V Pin=U7-10
+Removed Pin From Net: NetName=VCC Pin=U10-1
+Removed Pin From Net: NetName=VCC Pin=U10-6
+Removed Pin From Net: NetName=DAC_DGND Pin=U10-7
+Removed Pin From Net: NetName=DAC_DGND Pin=U10-7
+Removed Pin From Net: NetName=DAC_DGND Pin=U10-7
+Removed Pin From Net: NetName=DAC_DGND Pin=U10-7
+Removed Pin From Net: NetName=DAC_DGND Pin=U10-7
+Removed Pin From Net: NetName=DAC_DGND Pin=U10-7
+Removed Pin From Net: NetName=DAC_DGND Pin=U10-8
+Removed Pin From Net: NetName=DAC_DGND Pin=U10-10
+Removed Pin From Net: NetName=DAC_DGND Pin=USB_CHG-
+Removed Pin From Net: NetName=DAC_DGND Pin=USB_CHG-
+Removed Pin From Net: NetName=DAC_DGND Pin=USB_IN-
+Removed Pin From Net: NetName=DAC_DGND Pin=USB_IN-
+Removed Member From Class: ClassName=BluePitch Member=NT5
+Change Component Footprint: Designator=U10 Old Footprint=PSON50P300X100_HS-11N New Footprint=TSOP65P490X110_HS-9N
+Change Component Footprint: Designator=C52 Old Footprint=SMC_0402 New Footprint=SMC_0805
+Change Component Footprint: Designator=C55 Old Footprint=SMC_0402 New Footprint=SMC_0805
+Change Component Footprint: Designator=C56 Old Footprint=SMC_TantalumB New Footprint=SMC_0805
+Change Component Comment : Designator=C57 Old Comment=2.2uF New Comment=10nF
+Change Component Comment : Designator=R29 Old Comment=2M New Comment=330K
+Change Component Comment : Designator=C48 Old Comment=4.7uF New Comment=10nF
+Change Component Comment : Designator=C53 Old Comment=4.7uF New Comment=10nF
+Change Component Comment : Designator=C49 Old Comment=4.7uF New Comment=10uF
+Change Component Comment : Designator=C54 Old Comment=4.7uF New Comment=10uF
+Change Component Comment : Designator=R28 Old Comment=5.1K New Comment=100K
+Change Component Comment : Designator=R27 Old Comment=5.1K New Comment=330K
+Change Component Comment : Designator=C59 Old Comment=10uF New Comment=4.7uF
+Change Component Comment : Designator=L1 Old Comment=22uH New Comment=Inductor_Ferrite SMT
+Change Component Comment : Designator=C56 Old Comment=47uF New Comment=10nF
+Change Component Comment : Designator=C58 Old Comment=100nF New Comment=10nF
+Change Component Comment : Designator=R30 Old Comment=200K New Comment=330K
+Change Component Comment : Designator=C52 Old Comment=470nF New Comment=10uF
+Change Component Comment : Designator=C55 Old Comment=470nF New Comment=10uF
+Change Component Comment : Designator=U10 Old Comment=Low Voltage Buck Converter New Comment=TPS7A30
+Change Component Comment : Designator=U7 Old Comment=LT3042 New Comment=TPS7A49
+Change Component Comment : Designator=U9 Old Comment=LT3042 New Comment=TPS7A49
+Added Component: Designator=C40(SMC_0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C46(SMC_0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C47(SMC_0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C60(SMC_0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C61(SMC_0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C62(SMC_0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C63(SMC_0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C64(SMC_0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C65(SMC_0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C66(SMC_0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C67(SMC_0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C68(SMC_0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D3(DO214-AC)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D4(DO214-AC)
+Add component. Clean all parameters for all variants
+Added Component: Designator=L2(SML_4x4)
+Add component. Clean all parameters for all variants
+Added Component: Designator=M2(SOT95P237X112-3N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R33(SMR_0402)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R34(SMR_0402)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R35(SMR_0402)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R36(SMR_0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R37(SMR_0402)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R38(SMR_0402)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R39(SMR_0402)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U12(QFN50P400X400X100_HS-25N)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=AVCCL_5V Pin=C34-2
+Added Pin To Net: NetName=AVCCL_5V Pin=C38-2
+Added Pin To Net: NetName=PAGND Pin=C40-1
+Added Pin To Net: NetName=AVCCL_5V Pin=C42-2
+Added Pin To Net: NetName=AVCCL_5V Pin=C52-1
+Added Pin To Net: NetName=AVCCL_5V Pin=C53-2
+Added Pin To Net: NetName=AMP_AGND Pin=C55-1
+Added Pin To Net: NetName=AMP_AGND Pin=C56-2
+Added Pin To Net: NetName=DAC_DGND Pin=C59-1
+Added Pin To Net: NetName=DAC_DGND Pin=C60-1
+Added Pin To Net: NetName=VCC Pin=C60-2
+Added Pin To Net: NetName=PAGND Pin=C61-2
+Added Pin To Net: NetName=DAC_DGND Pin=C62-1
+Added Pin To Net: NetName=PAGND Pin=C62-2
+Added Pin To Net: NetName=DAC_DGND Pin=C65-1
+Added Pin To Net: NetName=VCC Pin=C65-2
+Added Pin To Net: NetName=DAC_DGND Pin=C66-1
+Added Pin To Net: NetName=PAGND Pin=D3-K
+Added Pin To Net: NetName=DAC_DGND Pin=L2-2
+Added Pin To Net: NetName=VCC Pin=M2-S
+Added Pin To Net: NetName=DAC_DGND Pin=NT1-2
+Added Pin To Net: NetName=AVCCL_5V Pin=R29-2
+Added Pin To Net: NetName=AMP_AGND Pin=R30-2
+Added Pin To Net: NetName=PAGND Pin=R35-2
+Added Pin To Net: NetName=VCC Pin=R36-1
+Added Pin To Net: NetName=AVCCL_5V Pin=U4-8
+Added Pin To Net: NetName=AVCCL_5V Pin=U5-8
+Added Pin To Net: NetName=AVCCL_5V Pin=U6-8
+Added Pin To Net: NetName=AVCCL_5V Pin=U9-1
+Added Pin To Net: NetName=AMP_AGND Pin=U10-1
+Added Pin To Net: NetName=VCC Pin=U12-5
+Added Pin To Net: NetName=VCC Pin=U12-6
+Added Pin To Net: NetName=PAGND Pin=U12-23
+Change Net Name : Old Net Name=AMP_AGND New Net Name=AMP_-5V
+Change Net Name : Old Net Name=AVCCL_5V New Net Name=DAC_5V
+Change Net Name : Old Net Name=PAGND New Net Name=AVCC_5V5
+Added Pin To Net: NetName=AMP_5V Pin=C46-1
+Added Pin To Net: NetName=AMP_5V Pin=C47-2
+Added Pin To Net: NetName=AMP_5V Pin=R27-2
+Added Pin To Net: NetName=AMP_5V Pin=U7-1
+Added Net: Name=AMP_5V
+Added Pin To Net: NetName=AVCC_-5V5 Pin=C54-1
+Added Pin To Net: NetName=AVCC_-5V5 Pin=D4-A
+Added Pin To Net: NetName=AVCC_-5V5 Pin=R39-1
+Added Pin To Net: NetName=AVCC_-5V5 Pin=U10-5
+Added Pin To Net: NetName=AVCC_-5V5 Pin=U10-8
+Added Pin To Net: NetName=AVCC_-5V5 Pin=U12-15
+Added Net: Name=AVCC_-5V5
+Added Pin To Net: NetName=NetC47_1 Pin=C47-1
+Added Pin To Net: NetName=NetC47_1 Pin=R27-1
+Added Pin To Net: NetName=NetC47_1 Pin=R28-2
+Added Pin To Net: NetName=NetC47_1 Pin=U7-2
+Added Net: Name=NetC47_1
+Added Pin To Net: NetName=NetC48_2 Pin=C48-2
+Added Pin To Net: NetName=NetC48_2 Pin=U7-6
+Added Net: Name=NetC48_2
+Added Pin To Net: NetName=NetC53_1 Pin=C53-1
+Added Pin To Net: NetName=NetC53_1 Pin=R29-1
+Added Pin To Net: NetName=NetC53_1 Pin=R33-2
+Added Pin To Net: NetName=NetC53_1 Pin=U9-2
+Added Net: Name=NetC53_1
+Added Pin To Net: NetName=NetC56_1 Pin=C56-1
+Added Pin To Net: NetName=NetC56_1 Pin=R30-1
+Added Pin To Net: NetName=NetC56_1 Pin=R34-2
+Added Pin To Net: NetName=NetC56_1 Pin=U10-2
+Added Net: Name=NetC56_1
+Added Pin To Net: NetName=NetC57_2 Pin=C57-2
+Added Pin To Net: NetName=NetC57_2 Pin=U9-6
+Added Net: Name=NetC57_2
+Added Pin To Net: NetName=NetC58_2 Pin=C58-2
+Added Pin To Net: NetName=NetC58_2 Pin=U10-6
+Added Net: Name=NetC58_2
+Added Pin To Net: NetName=NetC59_2 Pin=C59-2
+Added Pin To Net: NetName=NetC59_2 Pin=L1-1
+Added Pin To Net: NetName=NetC59_2 Pin=M2-D
+Added Net: Name=NetC59_2
+Added Pin To Net: NetName=NetC61_1 Pin=C61-1
+Added Pin To Net: NetName=NetC61_1 Pin=R35-1
+Added Pin To Net: NetName=NetC61_1 Pin=R37-2
+Added Pin To Net: NetName=NetC61_1 Pin=U12-22
+Added Net: Name=NetC61_1
+Added Pin To Net: NetName=NetC63_1 Pin=C63-1
+Added Pin To Net: NetName=NetC63_1 Pin=U12-21
+Added Net: Name=NetC63_1
+Added Pin To Net: NetName=NetC63_2 Pin=C63-2
+Added Pin To Net: NetName=NetC63_2 Pin=C64-1
+Added Pin To Net: NetName=NetC63_2 Pin=C67-2
+Added Pin To Net: NetName=NetC63_2 Pin=NT1-1
+Added Pin To Net: NetName=NetC63_2 Pin=R37-1
+Added Pin To Net: NetName=NetC63_2 Pin=U12-19
+Added Net: Name=NetC63_2
+Added Pin To Net: NetName=NetC64_2 Pin=C64-2
+Added Pin To Net: NetName=NetC64_2 Pin=C68-2
+Added Pin To Net: NetName=NetC64_2 Pin=R38-2
+Added Pin To Net: NetName=NetC64_2 Pin=U12-17
+Added Net: Name=NetC64_2
+Added Pin To Net: NetName=NetC66_2 Pin=C66-2
+Added Pin To Net: NetName=NetC66_2 Pin=R36-2
+Added Pin To Net: NetName=NetC66_2 Pin=U12-4
+Added Pin To Net: NetName=NetC66_2 Pin=U12-8
+Added Pin To Net: NetName=NetC66_2 Pin=U12-9
+Added Pin To Net: NetName=NetC66_2 Pin=U12-10
+Added Pin To Net: NetName=NetC66_2 Pin=U12-11
+Added Net: Name=NetC66_2
+Added Pin To Net: NetName=NetC67_1 Pin=C67-1
+Added Pin To Net: NetName=NetC67_1 Pin=U12-18
+Added Net: Name=NetC67_1
+Added Pin To Net: NetName=NetC68_1 Pin=C68-1
+Added Pin To Net: NetName=NetC68_1 Pin=R38-1
+Added Pin To Net: NetName=NetC68_1 Pin=R39-2
+Added Pin To Net: NetName=NetC68_1 Pin=U12-16
+Added Net: Name=NetC68_1
+Added Pin To Net: NetName=NetD3_A Pin=D3-A
+Added Pin To Net: NetName=NetD3_A Pin=L1-2
+Added Pin To Net: NetName=NetD3_A Pin=U12-1
+Added Pin To Net: NetName=NetD3_A Pin=U12-24
+Added Net: Name=NetD3_A
+Added Pin To Net: NetName=NetD4_K Pin=D4-K
+Added Pin To Net: NetName=NetD4_K Pin=L2-1
+Added Pin To Net: NetName=NetD4_K Pin=U12-13
+Added Pin To Net: NetName=NetD4_K Pin=U12-14
+Added Net: Name=NetD4_K
+Added Pin To Net: NetName=NetM2_G Pin=M2-G
+Added Pin To Net: NetName=NetM2_G Pin=U12-7
+Added Net: Name=NetM2_G
+Added Pin To Net: NetName=NetNT6_2 Pin=NT6-2
+Added Pin To Net: NetName=NetNT6_2 Pin=NT7-2
+Added Pin To Net: NetName=NetNT6_2 Pin=P4-4
+Added Net: Name=NetNT6_2
+Added Pin To Net: NetName=PAGND Pin=C40-2
+Added Pin To Net: NetName=PAGND Pin=C46-2
+Added Pin To Net: NetName=PAGND Pin=C48-1
+Added Pin To Net: NetName=PAGND Pin=C49-2
+Added Pin To Net: NetName=PAGND Pin=C52-2
+Added Pin To Net: NetName=PAGND Pin=C54-2
+Added Pin To Net: NetName=PAGND Pin=C55-2
+Added Pin To Net: NetName=PAGND Pin=C57-1
+Added Pin To Net: NetName=PAGND Pin=C58-1
+Added Pin To Net: NetName=PAGND Pin=NT2-2
+Added Pin To Net: NetName=PAGND Pin=NT3-2
+Added Pin To Net: NetName=PAGND Pin=NT4-1
+Added Pin To Net: NetName=PAGND Pin=R28-1
+Added Pin To Net: NetName=PAGND Pin=R33-1
+Added Pin To Net: NetName=PAGND Pin=R34-1
+Added Pin To Net: NetName=PAGND Pin=U7-4
+Added Pin To Net: NetName=PAGND Pin=U9-4
+Added Pin To Net: NetName=PAGND Pin=U10-4
+Added Pin To Net: NetName=PAGND Pin=U10-4
+Added Pin To Net: NetName=PAGND Pin=U10-4
+Added Pin To Net: NetName=PAGND Pin=U10-4
+Added Pin To Net: NetName=PAGND Pin=U10-4
+Added Pin To Net: NetName=PAGND Pin=U10-4
+Added Net: Name=PAGND
+Added Member To Class: ClassName=U_Power Member=Component C40 10uF
+Added Member To Class: ClassName=U_Power Member=Component C46 10uF
+Added Member To Class: ClassName=U_Power Member=Component C47 10nF
+Added Member To Class: ClassName=U_Power Member=Component C60 22uF
+Added Member To Class: ClassName=U_Power Member=Component C61 18pF
+Added Member To Class: ClassName=U_Power Member=Component C62 22uF
+Added Member To Class: ClassName=U_Power Member=Component C63 10nF
+Added Member To Class: ClassName=U_Power Member=Component C64 220nF
+Added Member To Class: ClassName=U_Power Member=Component C65 4.7uF
+Added Member To Class: ClassName=U_Power Member=Component C66 100nF
+Added Member To Class: ClassName=U_Power Member=Component C67 4.7nF
+Added Member To Class: ClassName=U_Power Member=Component C68 15pF
+Added Member To Class: ClassName=U_Power Member=Component D3 SS13
+Added Member To Class: ClassName=U_Power Member=Component D4 SS13
+Added Member To Class: ClassName=U_Power Member=Component L2 Inductor_Ferrite SMT
+Added Member To Class: ClassName=U_Power Member=Component M2 IRLML2244
+Added Member To Class: ClassName=U_Power Member=Component R33 100K
+Added Member To Class: ClassName=U_Power Member=Component R34 100K
+Added Member To Class: ClassName=U_Power Member=Component R35 360K
+Added Member To Class: ClassName=U_Power Member=Component R36 100R
+Added Member To Class: ClassName=U_Power Member=Component R37 100K
+Added Member To Class: ClassName=U_Power Member=Component R38 453K
+Added Member To Class: ClassName=U_Power Member=Component R39 100K
+Added Member To Class: ClassName=U_Power Member=Component U12 TPS65131

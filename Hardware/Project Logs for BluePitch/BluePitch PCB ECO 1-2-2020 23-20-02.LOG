@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=VCC Pin=C2-A
+Removed Pin From Net: NetName=DAC_DGND Pin=C2-K
+Removed Pin From Net: NetName=VCC Pin=C3-A
+Removed Pin From Net: NetName=DAC_DGND Pin=C3-K
+Removed Pin From Net: NetName=VCC Pin=C4-A
+Removed Pin From Net: NetName=DAC_DGND Pin=C4-K
+Change Component Footprint: Designator=C2 Old Footprint=THT_Cap5x11 New Footprint=SMC_1206
+Change Component Footprint: Designator=C3 Old Footprint=THT_Cap5x11 New Footprint=SMC_1206
+Change Component Footprint: Designator=C4 Old Footprint=THT_Cap5x11 New Footprint=SMC_1206
+Change Component Comment : Designator=C2 Old Comment=100uF New Comment=22uF
+Change Component Comment : Designator=C3 Old Comment=100uF New Comment=22uF
+Change Component Comment : Designator=C4 Old Comment=100uF New Comment=22uF
+Added Pin To Net: NetName=DAC_DGND Pin=C2-1
+Added Pin To Net: NetName=VCC Pin=C2-2
+Added Pin To Net: NetName=DAC_DGND Pin=C3-1
+Added Pin To Net: NetName=VCC Pin=C3-2
+Added Pin To Net: NetName=DAC_DGND Pin=C4-1
+Added Pin To Net: NetName=VCC Pin=C4-2

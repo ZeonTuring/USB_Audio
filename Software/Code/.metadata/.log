@@ -1,0 +1,1015 @@
+!SESSION 2020-02-06 13:46:32.171 -----------------------------------------------
+eclipse.buildId=4.11.0.I20190307-0500
+java.version=1.8.0_211
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_HK
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.egit.core 1 0 2020-02-06 14:17:15.801
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.ui 4 0 2020-02-06 14:17:38.641
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4699)
+	at org.eclipse.swt.SWT.error(SWT.java:4614)
+	at org.eclipse.swt.SWT.error(SWT.java:4585)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:451)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:350)
+	at org.eclipse.swt.widgets.Composite.getChildren(Composite.java:469)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDropAdapter.lambda$0(MarketplaceDropAdapter.java:136)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3919)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3550)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:566)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:661)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1476)
+
+!ENTRY org.eclipse.ui 4 0 2020-02-06 14:17:38.649
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4699)
+	at org.eclipse.swt.SWT.error(SWT.java:4614)
+	at org.eclipse.swt.SWT.error(SWT.java:4585)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:451)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:350)
+	at org.eclipse.swt.widgets.Composite.getChildren(Composite.java:469)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDropAdapter.lambda$0(MarketplaceDropAdapter.java:136)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3919)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3550)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:566)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:661)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1476)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-02-06 14:18:20.323
+!MESSAGE Error: Cannot run program "gcc": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "gcc": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:352)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:94)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:211)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:274)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:801)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:726)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:591)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:517)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-02-06 14:18:20.431
+!MESSAGE Error: Cannot run program "g++": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "g++": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:352)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:94)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:211)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:274)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:801)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:726)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:591)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:517)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-02-06 14:18:26.202
+!MESSAGE Indexed 'STM32F4_lib' (42 sources, 54 headers) in 4.78 sec: 8,626 declarations; 40,383 references; 12 unresolved inclusions; 143 syntax errors; 12,284 unresolved names (20%)
+
+!ENTRY ilg.gnumcueclipse.packs.data 4 1 2020-02-06 14:18:39.437
+!MESSAGE File .repos.xml does not exist, using defaults.
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-02-06 14:19:36.537
+!MESSAGE Error: Cannot run program "make": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "make": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:352)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:94)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:211)
+	at org.eclipse.cdt.core.CommandLauncherManager$CommandLauncherWrapper.execute(CommandLauncherManager.java:146)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:274)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeExternalBuild(ExternalBuildRunner.java:140)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeBuild(ExternalBuildRunner.java:73)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performExternalClean(CommonBuilder.java:1131)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1066)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1035)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:835)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:504)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:411)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-02-06 14:21:30.452
+!MESSAGE Error: Cannot run program "gcc": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "gcc": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:352)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:94)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:211)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:274)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:801)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:726)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:591)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:517)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-02-06 14:21:30.590
+!MESSAGE Error: Cannot run program "g++": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "g++": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:352)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:94)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:211)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:274)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:801)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:726)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:591)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:517)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-02-06 14:26:41.864
+!MESSAGE Error: Cannot run program "gcc": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "gcc": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:352)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:94)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:211)
+	at org.eclipse.cdt.core.CommandLauncherManager$CommandLauncherWrapper.execute(CommandLauncherManager.java:146)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:274)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.DefaultRunSIProvider.invokeProvider(DefaultRunSIProvider.java:147)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.jobs.CfgSCJobsUtil$1.run(CfgSCJobsUtil.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:867)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.jobs.CfgSCJobsUtil.getProviderScannerInfo(CfgSCJobsUtil.java:109)
+	at org.eclipse.cdt.build.core.scannerconfig.ScannerConfigBuilder.build(ScannerConfigBuilder.java:211)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.loadPathInfo(CfgDiscoveredPathManager.java:305)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getDiscoveredInfo(CfgDiscoveredPathManager.java:177)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ProfileInfoProvider.getEntryValues(ProfileInfoProvider.java:68)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.getDiscoveredEntries(BuildEntryStorage.java:203)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.putEntriesToLevel(BuildEntryStorage.java:193)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.initCache(AbstractEntryStorage.java:74)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.getEntries(AbstractEntryStorage.java:37)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildLanguageData.getEntries(BuildLanguageData.java:163)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.getEntriesToCopy(CDefaultLanguageData.java:99)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.createStore(CDefaultLanguageData.java:90)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.copySettingsFrom(CDefaultLanguageData.java:83)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.copySettingsFrom(CLanguageSettingCache.java:49)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.<init>(CLanguageSettingCache.java:38)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.copyLanguageData(CFolderDescriptionCache.java:82)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultFolderData.copyDataFrom(CDefaultFolderData.java:60)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.<init>(CFolderDescriptionCache.java:40)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.copyFolderData(CConfigurationDescriptionCache.java:242)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultConfigurationData.copySettingsFrom(CDefaultConfigurationData.java:117)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.applyData(CConfigurationDescriptionCache.java:200)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.applyDatas(CProjectDescription.java:219)
+	at org.eclipse.cdt.internal.core.settings.model.SetCProjectDescriptionOperation.executeOperation(SetCProjectDescriptionOperation.java:103)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:346)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:613)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:644)
+	at org.eclipse.cdt.internal.core.settings.model.AbstractCProjectDescriptionStorage.setProjectDescription(AbstractCProjectDescriptionStorage.java:208)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionStorageManager.setProjectDescription(CProjectDescriptionStorageManager.java:153)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.setProjectDescription(CProjectDescriptionManager.java:866)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.setProjectDescription(CProjectDescriptionManager.java:816)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.setProjectDescription(CProjectDescriptionManager.java:809)
+	at org.eclipse.cdt.core.model.CoreModel.setProjectDescription(CoreModel.java:1400)
+	at org.eclipse.cdt.ui.newui.AbstractPage$5.run(AbstractPage.java:695)
+	at org.eclipse.ui.actions.WorkspaceModifyDelegatingOperation.execute(WorkspaceModifyDelegatingOperation.java:71)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:110)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:438)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:354)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:469)
+	at org.eclipse.ui.internal.progress.ProgressManager$RunnableWithStatus.run(ProgressManager.java:1101)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.ui.internal.progress.ProgressManager.lambda$25(ProgressManager.java:978)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:147)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4580)
+	at org.eclipse.ui.internal.progress.ProgressManager.runInUI(ProgressManager.java:978)
+	at org.eclipse.cdt.ui.newui.AbstractPage.performSave(AbstractPage.java:706)
+	at org.eclipse.cdt.ui.newui.AbstractPage.performApply(AbstractPage.java:554)
+	at org.eclipse.jface.preference.PreferencePage.lambda$1(PreferencePage.java:289)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3944)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3547)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.run(PropertyDialogAction.java:160)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:568)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:400)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3944)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3547)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:566)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:661)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1476)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-02-06 14:27:29.679
+!MESSAGE Indexed 'STM32F4_lib' (42 sources, 82 headers) in 2.17 sec: 9,996 declarations; 54,600 references; 0 unresolved inclusions; 35 syntax errors; 58 unresolved names (0.09%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-02-06 14:36:46.968
+!MESSAGE Indexed 'STM32F4_lib' (42 sources, 82 headers) in 2 sec: 9,996 declarations; 54,600 references; 0 unresolved inclusions; 35 syntax errors; 58 unresolved names (0.09%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-02-06 14:40:12.575
+!MESSAGE Indexed 'test2' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-02-06 14:41:35.227
+!MESSAGE Error: Cannot run program "make": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "make": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:352)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:94)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:211)
+	at org.eclipse.cdt.core.CommandLauncherManager$CommandLauncherWrapper.execute(CommandLauncherManager.java:146)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:274)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeExternalBuild(ExternalBuildRunner.java:140)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeBuild(ExternalBuildRunner.java:73)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:746)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:514)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:457)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:833)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:504)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:404)
+	at org.eclipse.launchbar.ui.internal.commands.BuildActiveCommandHandler$1$1.run(BuildActiveCommandHandler.java:88)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 0 2020-02-06 14:57:57.923
+!MESSAGE Missing mandatory configuration. Fill-in the 'Config options:' field in the Debugger tab.
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 5012 2020-02-06 15:01:18.509
+!MESSAGE Error while launching command: gdb --version
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 5012 2020-02-06 15:01:35.841
+!MESSAGE Error while launching command: gdb --version
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-02-06 15:02:21.647
+!MESSAGE C:\Users\zeont\AppData\Roaming\GNU MCU Eclipse\OpenOCD\0.10.0-11-20190118-1134\bin\openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-02-06 15:03:12.231
+!MESSAGE C:\Users\zeont\AppData\Roaming\GNU MCU Eclipse\OpenOCD\0.10.0-11-20190118-1134\bin\openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f target/stm32f4x.cfg interface/cmsis-dap.cfg -c echo "Started by GNU ARM Eclipse"
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2020-02-06 15:03:12.325
+!MESSAGE OpenOCD failed with code (1).
+
+For more details, see the openocd.exe console.
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-02-06 15:04:06.705
+!MESSAGE C:\Users\zeont\AppData\Roaming\GNU MCU Eclipse\OpenOCD\0.10.0-11-20190118-1134\bin\openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f target/stm32f4x.cfg -f interface/cmsis-dap.cfg -c echo "Started by GNU ARM Eclipse"
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-02-06 15:04:17.476
+!MESSAGE C:\Users\zeont\AppData\Roaming\GNU MCU Eclipse\OpenOCD\0.10.0-11-20190118-1134\bin\openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f target/stm32f4x.cfg -f interface/cmsis-dap.cfg -c echo "Started by GNU ARM Eclipse"
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-02-06 15:05:10.052
+!MESSAGE C:\Users\zeont\AppData\Roaming\GNU MCU Eclipse\OpenOCD\0.10.0-11-20190118-1134\bin\openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f target/stm32f4x.cfg -f interface/cmsis-dap.cfg -c echo "Started by GNU ARM Eclipse"
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-02-06 15:05:26.743
+!MESSAGE C:\Users\zeont\AppData\Roaming\GNU MCU Eclipse\OpenOCD\0.10.0-11-20190118-1134\bin\openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-02-06 15:05:26.837
+!MESSAGE C:\Program Files (x86)\GNU Tools ARM Embedded\8 2019-q3-update\bin\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 5012 2020-02-06 15:05:29.805
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+localhost:3333: No connection could be made because the target machine actively refused it.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at ilg.gnuarmeclipse.debug.gdbjtag.openocd.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:435)
+	at ilg.gnuarmeclipse.debug.gdbjtag.openocd.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:171)
+	at ilg.gnuarmeclipse.debug.gdbjtag.openocd.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:147)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:862)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1029)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+localhost:3333: No connection could be made because the target machine actively refused it.
+java.lang.Exception: localhost:3333: No connection could be made because the target machine actively refused it.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2020-02-06 15:05:29.805
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+localhost:3333: No connection could be made because the target machine actively refused it.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2020-02-06 15:05:29.805
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+localhost:3333: No connection could be made because the target machine actively refused it.
+!STACK 0
+java.lang.Exception: localhost:3333: No connection could be made because the target machine actively refused it.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2020-02-06 15:11:04.943
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2020-02-06 15:11:04.943
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.943
+!MESSAGE Software being installed: GNU MCU C/C++ J-Link Debugging 4.4.1.202001271244 (ilg.gnumcueclipse.debug.gdbjtag.jlink.feature.feature.group 4.4.1.202001271244)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.943
+!MESSAGE Software currently installed: GNU MCU C/C++ PyOCD Debugging 1.3.3.201901011632 (ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature.feature.group 1.3.3.201901011632)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-02-06 15:11:04.943
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.943
+!MESSAGE GNU MCU C/C++ Debugger Restart Button 1.3.2.201901011632 (ilg.gnumcueclipse.debug.gdbjtag.restart 1.3.2.201901011632)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.943
+!MESSAGE GNU MCU C/C++ Debugger Restart Button 1.3.2.202001271244 (ilg.gnumcueclipse.debug.gdbjtag.restart 1.3.2.202001271244)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-02-06 15:11:04.943
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.943
+!MESSAGE From: GNU MCU C/C++ J-Link Debugging 4.4.1.202001271244 (ilg.gnumcueclipse.debug.gdbjtag.jlink.feature.feature.group 4.4.1.202001271244)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.943
+!MESSAGE To: org.eclipse.equinox.p2.iu; ilg.gnumcueclipse.debug.gdbjtag.restart [1.3.2.202001271244,1.3.2.202001271244]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-02-06 15:11:04.943
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.943
+!MESSAGE From: GNU MCU C/C++ PyOCD Debugging 1.3.3.201901011632 (ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature.feature.group 1.3.3.201901011632)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.943
+!MESSAGE To: org.eclipse.equinox.p2.iu; ilg.gnumcueclipse.debug.gdbjtag.restart [1.3.2.201901011632,1.3.2.201901011632]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2020-02-06 15:11:04.954
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2020-02-06 15:11:04.954
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.954
+!MESSAGE Software being installed: GNU MCU C/C++ J-Link Debugging 4.4.1.202001271244 (ilg.gnumcueclipse.debug.gdbjtag.jlink.feature.feature.group 4.4.1.202001271244)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.954
+!MESSAGE Software currently installed: GNU MCU C/C++ PyOCD Debugging 1.3.3.201901011632 (ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature.feature.group 1.3.3.201901011632)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-02-06 15:11:04.954
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.954
+!MESSAGE GNU MCU C/C++ Debugger Restart Button 1.3.2.201901011632 (ilg.gnumcueclipse.debug.gdbjtag.restart 1.3.2.201901011632)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.954
+!MESSAGE GNU MCU C/C++ Debugger Restart Button 1.3.2.202001271244 (ilg.gnumcueclipse.debug.gdbjtag.restart 1.3.2.202001271244)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-02-06 15:11:04.954
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.954
+!MESSAGE From: GNU MCU C/C++ J-Link Debugging 4.4.1.202001271244 (ilg.gnumcueclipse.debug.gdbjtag.jlink.feature.feature.group 4.4.1.202001271244)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.954
+!MESSAGE To: org.eclipse.equinox.p2.iu; ilg.gnumcueclipse.debug.gdbjtag.restart [1.3.2.202001271244,1.3.2.202001271244]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-02-06 15:11:04.954
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.954
+!MESSAGE From: GNU MCU C/C++ PyOCD Debugging 1.3.3.201901011632 (ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature.feature.group 1.3.3.201901011632)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.954
+!MESSAGE To: org.eclipse.equinox.p2.iu; ilg.gnumcueclipse.debug.gdbjtag.restart [1.3.2.201901011632,1.3.2.201901011632]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2020-02-06 15:11:04.993
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2020-02-06 15:11:04.993
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.993
+!MESSAGE Software being installed: GNU MCU C/C++ J-Link Debugging 4.4.1.202001271244 (ilg.gnumcueclipse.debug.gdbjtag.jlink.feature.feature.group 4.4.1.202001271244)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.993
+!MESSAGE Software currently installed: GNU MCU C/C++ PyOCD Debugging 1.3.3.201901011632 (ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature.feature.group 1.3.3.201901011632)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-02-06 15:11:04.993
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.993
+!MESSAGE GNU MCU C/C++ Debugger Restart Button 1.3.2.201901011632 (ilg.gnumcueclipse.debug.gdbjtag.restart 1.3.2.201901011632)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.993
+!MESSAGE GNU MCU C/C++ Debugger Restart Button 1.3.2.202001271244 (ilg.gnumcueclipse.debug.gdbjtag.restart 1.3.2.202001271244)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-02-06 15:11:04.993
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.993
+!MESSAGE From: GNU MCU C/C++ J-Link Debugging 4.4.1.202001271244 (ilg.gnumcueclipse.debug.gdbjtag.jlink.feature.feature.group 4.4.1.202001271244)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.993
+!MESSAGE To: org.eclipse.equinox.p2.iu; ilg.gnumcueclipse.debug.gdbjtag.restart [1.3.2.202001271244,1.3.2.202001271244]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-02-06 15:11:04.993
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.993
+!MESSAGE From: GNU MCU C/C++ PyOCD Debugging 1.3.3.201901011632 (ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature.feature.group 1.3.3.201901011632)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.993
+!MESSAGE To: org.eclipse.equinox.p2.iu; ilg.gnumcueclipse.debug.gdbjtag.restart [1.3.2.201901011632,1.3.2.201901011632]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2020-02-06 15:11:04.993
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2020-02-06 15:11:04.993
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.993
+!MESSAGE Software being installed: GNU MCU C/C++ J-Link Debugging 4.4.1.202001271244 (ilg.gnumcueclipse.debug.gdbjtag.jlink.feature.feature.group 4.4.1.202001271244)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.993
+!MESSAGE Software currently installed: GNU MCU C/C++ PyOCD Debugging 1.3.3.201901011632 (ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature.feature.group 1.3.3.201901011632)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-02-06 15:11:04.993
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.993
+!MESSAGE GNU MCU C/C++ Debugger Restart Button 1.3.2.201901011632 (ilg.gnumcueclipse.debug.gdbjtag.restart 1.3.2.201901011632)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.993
+!MESSAGE GNU MCU C/C++ Debugger Restart Button 1.3.2.202001271244 (ilg.gnumcueclipse.debug.gdbjtag.restart 1.3.2.202001271244)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-02-06 15:11:04.993
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.993
+!MESSAGE From: GNU MCU C/C++ J-Link Debugging 4.4.1.202001271244 (ilg.gnumcueclipse.debug.gdbjtag.jlink.feature.feature.group 4.4.1.202001271244)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.993
+!MESSAGE To: org.eclipse.equinox.p2.iu; ilg.gnumcueclipse.debug.gdbjtag.restart [1.3.2.202001271244,1.3.2.202001271244]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-02-06 15:11:04.993
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.993
+!MESSAGE From: GNU MCU C/C++ PyOCD Debugging 1.3.3.201901011632 (ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature.feature.group 1.3.3.201901011632)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-02-06 15:11:04.993
+!MESSAGE To: org.eclipse.equinox.p2.iu; ilg.gnumcueclipse.debug.gdbjtag.restart [1.3.2.201901011632,1.3.2.201901011632]
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2020-02-06 15:13:31.617
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2020-02-06 15:13:31.617
+!MESSAGE session context was:(profile=C__Users_zeont_eclipse_cpp-2019-03_eclipse, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,com.sun.jna,4.5.1.v20190425-1842
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,com.sun.jna.platform,4.5.1.v20190425-1842
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.apache.httpcomponents.httpclient.win,4.5.6.v20190213-1947
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.core,1.7.7.v20190521-1752
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.core.win32,1.7.7.v20190521-1752
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.help.ui,1.7.7.v20190521-1752
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.ui,1.7.7.v20190521-1752
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.ui.css,1.7.7.v20190521-1752
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.counters.core,2.0.2.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.counters.ui,0.0.5.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.graph.core,2.1.2.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.graph.ui,1.0.8.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.lami.core,1.1.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.lami.ui,1.1.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.os.linux.core,4.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.os.linux.ui,3.0.4.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.profiling.core,1.1.3.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.profiling.ui,2.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.timing.core,5.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.timing.ui,4.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.common.core,4.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.ctf.core,4.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.ctf.parser,1.0.2.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.datastore.core,1.1.4.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.doc.dev,5.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.doc.user,5.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.gdbtrace.core,1.0.2.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.gdbtrace.doc.user,5.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.gdbtrace.ui,1.1.1.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.lttng2.common.core,1.1.1.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.lttng2.control.core,1.2.1.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.lttng2.control.ui,1.2.7.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.lttng2.kernel.core,3.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.lttng2.kernel.ui,2.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.lttng2.ust.core,4.0.3.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.lttng2.ust.ui,3.0.5.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.segmentstore.core,2.1.1.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.statesystem.core,4.2.2.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.analysis.xml.core,3.2.2.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.analysis.xml.ui,2.1.8.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.chart.core,1.0.2.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.chart.ui,1.0.7.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.core,5.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.ctf.core,4.1.2.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.filter.parser,1.0.2.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.remote.core,2.0.2.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.remote.ui,1.0.5.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.ui,5.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.epp.mpc,1.7.7.v20190521-1752
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.tracecompass.ctf,5.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.tracecompass.gdbtrace,5.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.tracecompass.lttng2.control,5.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.tracecompass.lttng2.kernel,5.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.tracecompass.lttng2.ust,5.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.tracecompass.tmf.ctf,5.0.0.201906111727
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:13:31.617
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.tracecompass.tmf,5.0.0.201906111727
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2020-02-06 15:18:02.204
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2020-02-06 15:18:02.204
+!MESSAGE session context was:(profile=C__Users_zeont_eclipse_cpp-2019-03_eclipse, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,com.sun.jna,4.5.1.v20190425-1842
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,com.sun.jna.platform,4.5.1.v20190425-1842
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.apache.httpcomponents.httpclient.win,4.5.6.v20190213-1947
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.core,1.7.7.v20190521-1752
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.core.win32,1.7.7.v20190521-1752
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.help.ui,1.7.7.v20190521-1752
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.ui,1.7.7.v20190521-1752
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.ui.css,1.7.7.v20190521-1752
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.counters.core,2.0.2.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.counters.ui,0.0.5.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.graph.core,2.1.4.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.graph.ui,1.0.9.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.lami.core,1.1.1.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.lami.ui,1.1.2.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.os.linux.core,4.1.1.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.os.linux.ui,3.0.6.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.profiling.core,1.2.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.profiling.ui,2.0.2.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.timing.core,5.1.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.analysis.timing.ui,4.0.2.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.common.core,4.2.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.ctf.core,4.0.2.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.ctf.parser,1.0.4.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.datastore.core,1.2.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.doc.dev,5.2.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.doc.user,5.2.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.gdbtrace.core,1.0.4.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.gdbtrace.doc.user,5.2.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.gdbtrace.ui,1.1.2.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.lttng2.common.core,1.1.1.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.lttng2.control.core,1.2.3.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.lttng2.control.ui,1.2.9.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.lttng2.kernel.core,3.0.2.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.lttng2.kernel.ui,2.0.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.lttng2.ust.core,4.1.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.lttng2.ust.ui,3.0.6.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.segmentstore.core,2.1.2.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.statesystem.core,4.3.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.analysis.xml.core,3.2.4.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.analysis.xml.ui,2.1.10.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.chart.core,1.0.2.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.chart.ui,1.0.8.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.core,5.2.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.ctf.core,4.2.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.filter.parser,1.0.4.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.remote.core,2.0.3.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.remote.ui,1.0.7.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tracecompass.tmf.ui,5.2.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.epp.mpc,1.7.7.v20190521-1752
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.tracecompass.ctf,5.2.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.tracecompass.gdbtrace,5.2.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.tracecompass.lttng2.control,5.2.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.tracecompass.lttng2.kernel,5.2.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.tracecompass.lttng2.ust,5.2.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.tracecompass.tmf.ctf,5.2.0.201912112051
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-02-06 15:18:02.204
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.tracecompass.tmf,5.2.0.201912112051
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 0 2020-02-06 15:19:05.447
+!MESSAGE Missing mandatory configuration. Fill-in the 'Config options:' field in the Debugger tab.
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-02-06 15:19:34.622
+!MESSAGE /openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-02-06 15:19:34.687
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitorWithProgress@1c8f21e3): Status ERROR: ilg.gnuarmeclipse.debug.gdbjtag code=-1 Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed. org.eclipse.core.runtime.CoreException: Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed.' resulted in an error.
+!SUBENTRY 1 ilg.gnuarmeclipse.debug.gdbjtag 4 -1 2020-02-06 15:19:34.687
+!MESSAGE Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed.
+	at ilg.gnuarmeclipse.debug.gdbjtag.DebugUtils.exec(DebugUtils.java:474)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend.launchGdbServerProcess(GnuArmGdbServerBackend.java:333)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend$GdbServerStep$2.run(GnuArmGdbServerBackend.java:780)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Cannot run program "/openocd.exe": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:352)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:94)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at ilg.gnuarmeclipse.debug.gdbjtag.DebugUtils.exec(DebugUtils.java:471)
+	... 3 more
+!SUBENTRY 2 ilg.gnuarmeclipse.debug.gdbjtag 4 -1 2020-02-06 15:19:34.687
+!MESSAGE Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed.
+!STACK 0
+java.io.IOException: Cannot run program "/openocd.exe": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:352)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:94)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at ilg.gnuarmeclipse.debug.gdbjtag.DebugUtils.exec(DebugUtils.java:471)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend.launchGdbServerProcess(GnuArmGdbServerBackend.java:333)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend$GdbServerStep$2.run(GnuArmGdbServerBackend.java:780)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2020-02-06 15:19:34.687
+!MESSAGE Error in services launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed.
+	at org.eclipse.cdt.dsf.concurrent.Sequence.abortExecution(Sequence.java:599)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$4(Sequence.java:591)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleErrorOrWarning(Sequence.java:448)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleFailure(RequestMonitor.java:433)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:393)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.eclipse.core.runtime.CoreException: Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed.
+	at ilg.gnuarmeclipse.debug.gdbjtag.DebugUtils.exec(DebugUtils.java:474)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend.launchGdbServerProcess(GnuArmGdbServerBackend.java:333)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend$GdbServerStep$2.run(GnuArmGdbServerBackend.java:780)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Cannot run program "/openocd.exe": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:352)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:94)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at ilg.gnuarmeclipse.debug.gdbjtag.DebugUtils.exec(DebugUtils.java:471)
+	... 3 more
+!SUBENTRY 1 ilg.gnuarmeclipse.debug.gdbjtag 4 -1 2020-02-06 15:19:34.687
+!MESSAGE Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed.
+	at ilg.gnuarmeclipse.debug.gdbjtag.DebugUtils.exec(DebugUtils.java:474)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend.launchGdbServerProcess(GnuArmGdbServerBackend.java:333)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend$GdbServerStep$2.run(GnuArmGdbServerBackend.java:780)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Cannot run program "/openocd.exe": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:352)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:94)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at ilg.gnuarmeclipse.debug.gdbjtag.DebugUtils.exec(DebugUtils.java:471)
+	... 3 more
+!SUBENTRY 2 ilg.gnuarmeclipse.debug.gdbjtag 4 -1 2020-02-06 15:19:34.687
+!MESSAGE Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed.
+!STACK 0
+java.io.IOException: Cannot run program "/openocd.exe": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:352)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:94)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at ilg.gnuarmeclipse.debug.gdbjtag.DebugUtils.exec(DebugUtils.java:471)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend.launchGdbServerProcess(GnuArmGdbServerBackend.java:333)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend$GdbServerStep$2.run(GnuArmGdbServerBackend.java:780)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-02-06 15:20:27.281
+!MESSAGE /openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-02-06 15:20:27.343
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitorWithProgress@77af598c): Status ERROR: ilg.gnuarmeclipse.debug.gdbjtag code=-1 Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed. org.eclipse.core.runtime.CoreException: Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed.' resulted in an error.
+!SUBENTRY 1 ilg.gnuarmeclipse.debug.gdbjtag 4 -1 2020-02-06 15:20:27.343
+!MESSAGE Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed.
+	at ilg.gnuarmeclipse.debug.gdbjtag.DebugUtils.exec(DebugUtils.java:474)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend.launchGdbServerProcess(GnuArmGdbServerBackend.java:333)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend$GdbServerStep$2.run(GnuArmGdbServerBackend.java:780)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Cannot run program "/openocd.exe": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:352)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:94)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at ilg.gnuarmeclipse.debug.gdbjtag.DebugUtils.exec(DebugUtils.java:471)
+	... 3 more
+!SUBENTRY 2 ilg.gnuarmeclipse.debug.gdbjtag 4 -1 2020-02-06 15:20:27.343
+!MESSAGE Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed.
+!STACK 0
+java.io.IOException: Cannot run program "/openocd.exe": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:352)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:94)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at ilg.gnuarmeclipse.debug.gdbjtag.DebugUtils.exec(DebugUtils.java:471)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend.launchGdbServerProcess(GnuArmGdbServerBackend.java:333)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend$GdbServerStep$2.run(GnuArmGdbServerBackend.java:780)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2020-02-06 15:20:27.343
+!MESSAGE Error in services launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed.
+	at org.eclipse.cdt.dsf.concurrent.Sequence.abortExecution(Sequence.java:599)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$4(Sequence.java:591)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleErrorOrWarning(Sequence.java:448)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleFailure(RequestMonitor.java:433)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:393)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.eclipse.core.runtime.CoreException: Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed.
+	at ilg.gnuarmeclipse.debug.gdbjtag.DebugUtils.exec(DebugUtils.java:474)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend.launchGdbServerProcess(GnuArmGdbServerBackend.java:333)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend$GdbServerStep$2.run(GnuArmGdbServerBackend.java:780)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Cannot run program "/openocd.exe": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:352)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:94)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at ilg.gnuarmeclipse.debug.gdbjtag.DebugUtils.exec(DebugUtils.java:471)
+	... 3 more
+!SUBENTRY 1 ilg.gnuarmeclipse.debug.gdbjtag 4 -1 2020-02-06 15:20:27.343
+!MESSAGE Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed.
+	at ilg.gnuarmeclipse.debug.gdbjtag.DebugUtils.exec(DebugUtils.java:474)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend.launchGdbServerProcess(GnuArmGdbServerBackend.java:333)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend$GdbServerStep$2.run(GnuArmGdbServerBackend.java:780)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Cannot run program "/openocd.exe": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:352)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:94)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at ilg.gnuarmeclipse.debug.gdbjtag.DebugUtils.exec(DebugUtils.java:471)
+	... 3 more
+!SUBENTRY 2 ilg.gnuarmeclipse.debug.gdbjtag 4 -1 2020-02-06 15:20:27.343
+!MESSAGE Launching command [/openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"] failed.
+!STACK 0
+java.io.IOException: Cannot run program "/openocd.exe": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:352)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:94)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at ilg.gnuarmeclipse.debug.gdbjtag.DebugUtils.exec(DebugUtils.java:471)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend.launchGdbServerProcess(GnuArmGdbServerBackend.java:333)
+	at ilg.gnuarmeclipse.debug.gdbjtag.dsf.GnuArmGdbServerBackend$GdbServerStep$2.run(GnuArmGdbServerBackend.java:780)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-02-06 15:21:07.215
+!MESSAGE C:\Users\zeont\AppData\Roaming\GNU MCU Eclipse\OpenOCD\0.10.0-13\bin\openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-02-06 15:21:07.309
+!MESSAGE C:\Program Files (x86)\GNU Tools ARM Embedded\8 2019-q3-update\bin\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 5012 2020-02-06 15:21:09.778
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+localhost:3333: No connection could be made because the target machine actively refused it.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at ilg.gnuarmeclipse.debug.gdbjtag.openocd.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:435)
+	at ilg.gnuarmeclipse.debug.gdbjtag.openocd.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:171)
+	at ilg.gnuarmeclipse.debug.gdbjtag.openocd.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:147)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:862)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1029)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+localhost:3333: No connection could be made because the target machine actively refused it.
+java.lang.Exception: localhost:3333: No connection could be made because the target machine actively refused it.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2020-02-06 15:21:09.778
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+localhost:3333: No connection could be made because the target machine actively refused it.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2020-02-06 15:21:09.778
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+localhost:3333: No connection could be made because the target machine actively refused it.
+!STACK 0
+java.lang.Exception: localhost:3333: No connection could be made because the target machine actively refused it.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-02-06 15:21:17.562
+!MESSAGE C:\Users\zeont\AppData\Roaming\GNU MCU Eclipse\OpenOCD\0.10.0-13\bin\openocd.exe -c gdb_port 3333 -c telnet_port 4444 -f interface/cmsis-dap.cfg -f target/stm32f4x.cfg -c echo "Started by GNU ARM Eclipse"
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-02-06 15:21:17.655
+!MESSAGE C:\Program Files (x86)\GNU Tools ARM Embedded\8 2019-q3-update\bin\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 5012 2020-02-06 15:21:20.061
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+localhost:3333: No connection could be made because the target machine actively refused it.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at ilg.gnuarmeclipse.debug.gdbjtag.openocd.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:435)
+	at ilg.gnuarmeclipse.debug.gdbjtag.openocd.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:171)
+	at ilg.gnuarmeclipse.debug.gdbjtag.openocd.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:147)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:862)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1029)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+localhost:3333: No connection could be made because the target machine actively refused it.
+java.lang.Exception: localhost:3333: No connection could be made because the target machine actively refused it.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2020-02-06 15:21:20.061
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+localhost:3333: No connection could be made because the target machine actively refused it.
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2020-02-06 15:21:20.061
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3333
+Error message from debugger back end:
+localhost:3333: No connection could be made because the target machine actively refused it.
+!STACK 0
+java.lang.Exception: localhost:3333: No connection could be made because the target machine actively refused it.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SESSION 2020-02-06 21:18:01.839 -----------------------------------------------
+eclipse.buildId=4.11.0.I20190307-0500
+java.version=1.8.0_211
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_HK
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.egit.core 1 0 2020-02-06 21:18:10.410
+!MESSAGE Using Apache MINA sshd as ssh client.

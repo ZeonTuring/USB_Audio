@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=NetC68_1 Pin=C68-1
+Removed Pin From Net: NetName=NetC64_2 Pin=C68-2
+Change Component Comment : Designator=R39 Old Comment=100K New Comment=453K
+Change Component Comment : Designator=R38 Old Comment=453K New Comment=100K
+Added Pin To Net: NetName=AVCC_-5V5 Pin=C68-1
+Added Pin To Net: NetName=NetC68_1 Pin=C68-2
+Change Net Name : Old Net Name=NetC68_1 New Net Name=NetC68_2

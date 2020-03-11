@@ -1,0 +1,42 @@
+Added Component: Designator=U7(TSOP65P490X110_HS-9N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U9(TSOP65P490X110_HS-9N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U10(TSOP65P490X110_HS-9N)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=AMP_5V Pin=U7-1
+Added Pin To Net: NetName=NetC47_1 Pin=U7-2
+Added Pin To Net: NetName=PAGND Pin=U7-4
+Added Pin To Net: NetName=PAGND Pin=U7-4
+Added Pin To Net: NetName=PAGND Pin=U7-4
+Added Pin To Net: NetName=PAGND Pin=U7-4
+Added Pin To Net: NetName=PAGND Pin=U7-4
+Added Pin To Net: NetName=PAGND Pin=U7-4
+Added Pin To Net: NetName=AVCC_5V5 Pin=U7-5
+Added Pin To Net: NetName=NetC48_2 Pin=U7-6
+Added Pin To Net: NetName=AVCC_5V5 Pin=U7-8
+Added Pin To Net: NetName=DAC_5V Pin=U9-1
+Added Pin To Net: NetName=NetC53_1 Pin=U9-2
+Added Pin To Net: NetName=PAGND Pin=U9-4
+Added Pin To Net: NetName=PAGND Pin=U9-4
+Added Pin To Net: NetName=PAGND Pin=U9-4
+Added Pin To Net: NetName=PAGND Pin=U9-4
+Added Pin To Net: NetName=PAGND Pin=U9-4
+Added Pin To Net: NetName=PAGND Pin=U9-4
+Added Pin To Net: NetName=AVCC_5V5 Pin=U9-5
+Added Pin To Net: NetName=NetC57_2 Pin=U9-6
+Added Pin To Net: NetName=AVCC_5V5 Pin=U9-8
+Added Pin To Net: NetName=AMP_-5V Pin=U10-1
+Added Pin To Net: NetName=NetC56_1 Pin=U10-2
+Added Pin To Net: NetName=PAGND Pin=U10-4
+Added Pin To Net: NetName=PAGND Pin=U10-4
+Added Pin To Net: NetName=PAGND Pin=U10-4
+Added Pin To Net: NetName=PAGND Pin=U10-4
+Added Pin To Net: NetName=PAGND Pin=U10-4
+Added Pin To Net: NetName=PAGND Pin=U10-4
+Added Pin To Net: NetName=AVCC_-5V5 Pin=U10-5
+Added Pin To Net: NetName=NetC58_2 Pin=U10-6
+Added Pin To Net: NetName=AVCC_-5V5 Pin=U10-8
+Added Member To Class: ClassName=U_Power Member=Component U7 TPS7A49
+Added Member To Class: ClassName=U_Power Member=Component U9 TPS7A49
+Added Member To Class: ClassName=U_Power Member=Component U10 TPS7A30

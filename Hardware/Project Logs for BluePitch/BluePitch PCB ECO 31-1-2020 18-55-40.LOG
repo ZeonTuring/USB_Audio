@@ -1,0 +1,5 @@
+Change Component Kind : Designator=NT1 Old Kind=Standard New Kind=Net Tie
+Added Member To Class: ClassName=U_IV_Converter Member=Component U5 OPA1612
+Added Member To Class: ClassName=U_IV_Converter Member=Component U6 OPA1612
+Added Member To Class: ClassName=U_Power Member=Component U8 LP5907
+Added Member To Class: ClassName=U_Power Member=Component U9 LT3042

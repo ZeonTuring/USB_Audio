@@ -1,0 +1,894 @@
+14:57:27 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+Linking objects
+arm-none-eabi-gcc  -mthumb -mthumb-interwork -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -T D:\USB_Audio\Software\Code\test2\/build\STM32F401RETX_FLASH.ld --specs=nosys.specs -u _printf_float -Wl,--gc-sections -static --specs=nano.specs -Wl,-Map=bin/test-d.map  -LC:\Users\zeont\git\STM32F4_lib\lib -o bin/test-d.elf obj/main-d.o   -l-d
+14:57:57 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+make: Nothing to be done for `all'.
+15:01:18 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+make: Nothing to be done for `all'.
+15:01:35 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+make: Nothing to be done for `all'.
+15:02:21 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+make: Nothing to be done for `all'.
+15:03:11 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+make: Nothing to be done for `all'.
+15:04:06 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+make: Nothing to be done for `all'.
+15:04:17 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+make: Nothing to be done for `all'.
+15:05:09 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+make: Nothing to be done for `all'.
+15:05:26 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+make: Nothing to be done for `all'.
+15:19:05 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+make: Nothing to be done for `all'.
+15:19:34 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+make: Nothing to be done for `all'.
+15:20:26 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+make: Nothing to be done for `all'.
+15:21:06 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+make: Nothing to be done for `all'.
+15:21:17 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+make: Nothing to be done for `all'.
+Build not configured correctly
+21:23:50 **** Incremental Build of configuration DEBUG for project STM32F4_lib ****
+make -k -j4 all 
+Make version = 3.81
+Build = DEBUG
+MCU sub-family = STM32F401xx
+Building lib-d.a
+A subdirectory or file obj\CMSIS\ already exists.
+Error occurred while processing: obj\CMSIS\.
+A subdirectory or file obj\drivers\ already exists.
+Error occurred while processing: obj\drivers\.
+A subdirectory or file lib already exists.
+Error occurred while processing: lib.
+Compiling src/drivers/misc.c
+Compiling src/drivers/stm32f4xx_gpio.c
+src/drivers/stm32f4xx_gpio.c: In function 'GPIO_DeInit':
+src/drivers/stm32f4xx_gpio.c:130:3: warning: implicit declaration of function 'assert_param' [-Wimplicit-function-declaration]
+   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+   ^~~~~~~~~~~~
+src/drivers/misc.c: In function 'NVIC_PriorityGroupConfig':
+src/drivers/misc.c:121:3: warning: implicit declaration of function 'assert_param' [-Wimplicit-function-declaration]
+   assert_param(IS_NVIC_PRIORITY_GROUP(NVIC_PriorityGroup));
+   ^~~~~~~~~~~~
+In file included from src/drivers/stm32f4xx_gpio.c:84:
+src/drivers/stm32f4xx_gpio.c: In function 'GPIO_Init':
+inc/drivers/stm32f4xx_gpio.h:73:40: error: 'GPIO_Mode_AF' undeclared (first use in this function); did you mean 'GPIO_Mode_IN'?
+                             ((MODE) == GPIO_Mode_AF)|| ((MODE) == GPIO_Mode_AN))
+                                        ^~~~~~~~~~~~
+src/drivers/stm32f4xx_gpio.c:209:16: note: in expansion of macro 'IS_GPIO_MODE'
+   assert_param(IS_GPIO_MODE(GPIO_InitStruct->GPIO_Mode));
+                ^~~~~~~~~~~~
+inc/drivers/stm32f4xx_gpio.h:73:40: note: each undeclared identifier is reported only once for each function it appears in
+                             ((MODE) == GPIO_Mode_AF)|| ((MODE) == GPIO_Mode_AN))
+                                        ^~~~~~~~~~~~
+src/drivers/stm32f4xx_gpio.c:209:16: note: in expansion of macro 'IS_GPIO_MODE'
+   assert_param(IS_GPIO_MODE(GPIO_InitStruct->GPIO_Mode));
+                ^~~~~~~~~~~~
+inc/drivers/stm32f4xx_gpio.h:73:67: error: 'GPIO_Mode_AN' undeclared (first use in this function); did you mean 'GPIO_Mode_IN'?
+                             ((MODE) == GPIO_Mode_AF)|| ((MODE) == GPIO_Mode_AN))
+                                                                   ^~~~~~~~~~~~
+src/drivers/stm32f4xx_gpio.c:209:16: note: in expansion of macro 'IS_GPIO_MODE'
+   assert_param(IS_GPIO_MODE(GPIO_InitStruct->GPIO_Mode));
+                ^~~~~~~~~~~~
+inc/drivers/stm32f4xx_gpio.h:83:43: error: 'GPIO_OType_PP' undeclared (first use in this function); did you mean 'GPIO_TypeDef'?
+ #define IS_GPIO_OTYPE(OTYPE) (((OTYPE) == GPIO_OType_PP) || ((OTYPE) == GPIO_OType_OD))
+                                           ^~~~~~~~~~~~~
+src/drivers/stm32f4xx_gpio.c:235:22: note: in expansion of macro 'IS_GPIO_OTYPE'
+         assert_param(IS_GPIO_OTYPE(GPIO_InitStruct->GPIO_OType));
+                      ^~~~~~~~~~~~~
+inc/drivers/stm32f4xx_gpio.h:83:73: error: 'GPIO_OType_OD' undeclared (first use in this function); did you mean 'GPIO_TypeDef'?
+ #define IS_GPIO_OTYPE(OTYPE) (((OTYPE) == GPIO_OType_PP) || ((OTYPE) == GPIO_OType_OD))
+                                                                         ^~~~~~~~~~~~~
+src/drivers/stm32f4xx_gpio.c:235:22: note: in expansion of macro 'IS_GPIO_OTYPE'
+         assert_param(IS_GPIO_OTYPE(GPIO_InitStruct->GPIO_OType));
+                      ^~~~~~~~~~~~~
+src/drivers/stm32f4xx_gpio.c: In function 'GPIO_StructInit':
+src/drivers/stm32f4xx_gpio.c:260:33: error: 'GPIO_OType_PP' undeclared (first use in this function); did you mean 'GPIO_TypeDef'?
+   GPIO_InitStruct->GPIO_OType = GPIO_OType_PP;
+                                 ^~~~~~~~~~~~~
+                                 GPIO_TypeDef
+make: *** [obj/drivers/stm32f4xx_gpio-d.o] Error 1
+make: Target `all' not remade because of errors.
+"make -k -j4 all" terminated with exit code 2. Build might be incomplete.
+Build not configured correctly
+21:23:52 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+make: Nothing to be done for `all'.
+Build not configured correctly
+21:25:09 **** Incremental Build of configuration DEBUG for project STM32F4_lib ****
+make -k -j4 all 
+Make version = 3.81
+Build = DEBUG
+MCU sub-family = STM32F401xx
+Building lib-d.a
+A subdirectory or file obj\CMSIS\ already exists.
+Error occurred while processing: obj\CMSIS\.
+A subdirectory or file obj\drivers\ already exists.
+Error occurred while processing: obj\drivers\.
+A subdirectory or file lib already exists.
+Error occurred while processing: lib.
+Compiling src/drivers/stm32f4xx_gpio.c
+src/drivers/stm32f4xx_gpio.c: In function 'GPIO_DeInit':
+src/drivers/stm32f4xx_gpio.c:130:3: warning: implicit declaration of function 'assert_param' [-Wimplicit-function-declaration]
+   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+   ^~~~~~~~~~~~
+In file included from src/drivers/stm32f4xx_gpio.c:84:
+src/drivers/stm32f4xx_gpio.c: In function 'GPIO_Init':
+inc/drivers/stm32f4xx_gpio.h:73:40: error: 'GPIO_Mode_AF' undeclared (first use in this function); did you mean 'GPIO_Mode_IN'?
+                             ((MODE) == GPIO_Mode_AF)|| ((MODE) == GPIO_Mode_AN))
+                                        ^~~~~~~~~~~~
+src/drivers/stm32f4xx_gpio.c:209:16: note: in expansion of macro 'IS_GPIO_MODE'
+   assert_param(IS_GPIO_MODE(GPIO_InitStruct->GPIO_Mode));
+                ^~~~~~~~~~~~
+inc/drivers/stm32f4xx_gpio.h:73:40: note: each undeclared identifier is reported only once for each function it appears in
+                             ((MODE) == GPIO_Mode_AF)|| ((MODE) == GPIO_Mode_AN))
+                                        ^~~~~~~~~~~~
+src/drivers/stm32f4xx_gpio.c:209:16: note: in expansion of macro 'IS_GPIO_MODE'
+   assert_param(IS_GPIO_MODE(GPIO_InitStruct->GPIO_Mode));
+                ^~~~~~~~~~~~
+inc/drivers/stm32f4xx_gpio.h:73:67: error: 'GPIO_Mode_AN' undeclared (first use in this function); did you mean 'GPIO_Mode_IN'?
+                             ((MODE) == GPIO_Mode_AF)|| ((MODE) == GPIO_Mode_AN))
+                                                                   ^~~~~~~~~~~~
+src/drivers/stm32f4xx_gpio.c:209:16: note: in expansion of macro 'IS_GPIO_MODE'
+   assert_param(IS_GPIO_MODE(GPIO_InitStruct->GPIO_Mode));
+                ^~~~~~~~~~~~
+make: *** [obj/drivers/stm32f4xx_gpio-d.o] Error 1
+make: Target `all' not remade because of errors.
+"make -k -j4 all" terminated with exit code 2. Build might be incomplete.
+Build not configured correctly
+21:25:10 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+make: Nothing to be done for `all'.
+Build not configured correctly
+21:25:29 **** Incremental Build of configuration DEBUG for project STM32F4_lib ****
+make -k -j4 all 
+Make version = 3.81
+Build = DEBUG
+MCU sub-family = STM32F401xx
+Building lib-d.a
+A subdirectory or file obj\CMSIS\ already exists.
+Error occurred while processing: obj\CMSIS\.
+A subdirectory or file obj\drivers\ already exists.
+Error occurred while processing: obj\drivers\.
+A subdirectory or file lib already exists.
+Error occurred while processing: lib.
+Compiling src/drivers/stm32f4xx_gpio.c
+src/drivers/stm32f4xx_gpio.c: In function 'GPIO_DeInit':
+src/drivers/stm32f4xx_gpio.c:130:3: warning: implicit declaration of function 'assert_param' [-Wimplicit-function-declaration]
+   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+   ^~~~~~~~~~~~
+Packing library
+Build not configured correctly
+21:25:30 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+Linking objects
+arm-none-eabi-gcc  -mthumb -mthumb-interwork -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -T D:\USB_Audio\Software\Code\test2\/build\STM32F401RETX_FLASH.ld --specs=nosys.specs -u _printf_float -Wl,--gc-sections -static --specs=nano.specs -Wl,-Map=bin/test-d.map  -LC:\Users\zeont\git\STM32F4_lib\lib -o bin/test-d.elf obj/main-d.o   -l-d
+21:26:06 **** Incremental Build of configuration DEBUG for project STM32F4_lib ****
+make -k -j4 all 
+Make version = 3.81
+Build = DEBUG
+MCU sub-family = STM32F401xx
+Building lib-d.a
+A subdirectory or file obj\CMSIS\ already exists.
+Error occurred while processing: obj\CMSIS\.
+A subdirectory or file obj\drivers\ already exists.
+Error occurred while processing: obj\drivers\.
+A subdirectory or file lib already exists.
+Error occurred while processing: lib.
+Compiling src/drivers/stm32f4xx_gpio.c
+src/drivers/stm32f4xx_gpio.c: In function 'GPIO_Init':
+src/drivers/stm32f4xx_gpio.c:207:3: warning: implicit declaration of function 'assert_param'; did you mean 'assert'? [-Wimplicit-function-declaration]
+   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+   ^~~~~~~~~~~~
+   assert
+Packing library
+Build not configured correctly
+21:26:08 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+Linking objects
+arm-none-eabi-gcc  -mthumb -mthumb-interwork -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -T D:\USB_Audio\Software\Code\test2\/build\STM32F401RETX_FLASH.ld --specs=nosys.specs -u _printf_float -Wl,--gc-sections -static --specs=nano.specs -Wl,-Map=bin/test-d.map  -LC:\Users\zeont\git\STM32F4_lib\lib -o bin/test-d.elf obj/main-d.o   -l-d
+Build not configured correctly
+21:26:26 **** Incremental Build of configuration DEBUG for project STM32F4_lib ****
+make -k -j4 all 
+Make version = 3.81
+Build = DEBUG
+MCU sub-family = STM32F401xx
+Building lib-d.a
+A subdirectory or file obj\CMSIS\ already exists.
+Error occurred while processing: obj\CMSIS\.
+A subdirectory or file obj\drivers\ already exists.
+Error occurred while processing: obj\drivers\.
+A subdirectory or file lib already exists.
+Error occurred while processing: lib.
+Compiling src/drivers/stm32f4xx_gpio.c
+src/drivers/stm32f4xx_gpio.c: In function 'GPIO_Init':
+src/drivers/stm32f4xx_gpio.c:228:9: warning: implicit declaration of function 'assert_param'; did you mean 'assert'? [-Wimplicit-function-declaration]
+         assert_param(IS_GPIO_SPEED(GPIO_InitStruct->GPIO_Speed));
+         ^~~~~~~~~~~~
+         assert
+Packing library
+Build not configured correctly
+21:26:27 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+Linking objects
+arm-none-eabi-gcc  -mthumb -mthumb-interwork -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -T D:\USB_Audio\Software\Code\test2\/build\STM32F401RETX_FLASH.ld --specs=nosys.specs -u _printf_float -Wl,--gc-sections -static --specs=nano.specs -Wl,-Map=bin/test-d.map  -LC:\Users\zeont\git\STM32F4_lib\lib -o bin/test-d.elf obj/main-d.o   -l-d
+Build not configured correctly
+21:26:33 **** Incremental Build of configuration DEBUG for project STM32F4_lib ****
+make -k -j4 all 
+Make version = 3.81
+Build = DEBUG
+MCU sub-family = STM32F401xx
+Building lib-d.a
+A subdirectory or file obj\CMSIS\ already exists.
+Error occurred while processing: obj\CMSIS\.
+A subdirectory or file obj\drivers\ already exists.
+Error occurred while processing: obj\drivers\.
+A subdirectory or file lib already exists.
+Error occurred while processing: lib.
+Compiling src/drivers/stm32f4xx_gpio.c
+src/drivers/stm32f4xx_gpio.c: In function 'GPIO_Init':
+src/drivers/stm32f4xx_gpio.c:235:9: warning: implicit declaration of function 'assert_param'; did you mean 'assert'? [-Wimplicit-function-declaration]
+         assert_param(IS_GPIO_OTYPE(GPIO_InitStruct->GPIO_OType));
+         ^~~~~~~~~~~~
+         assert
+Packing library
+Build not configured correctly
+21:26:35 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+Linking objects
+arm-none-eabi-gcc  -mthumb -mthumb-interwork -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -T D:\USB_Audio\Software\Code\test2\/build\STM32F401RETX_FLASH.ld --specs=nosys.specs -u _printf_float -Wl,--gc-sections -static --specs=nano.specs -Wl,-Map=bin/test-d.map  -LC:\Users\zeont\git\STM32F4_lib\lib -o bin/test-d.elf obj/main-d.o   -l-d
+Build not configured correctly
+21:26:47 **** Incremental Build of configuration DEBUG for project STM32F4_lib ****
+make -k -j4 all 
+Make version = 3.81
+Build = DEBUG
+MCU sub-family = STM32F401xx
+Building lib-d.a
+A subdirectory or file obj\CMSIS\ already exists.
+Error occurred while processing: obj\CMSIS\.
+A subdirectory or file obj\drivers\ already exists.
+Error occurred while processing: obj\drivers\.
+A subdirectory or file lib already exists.
+Error occurred while processing: lib.
+Compiling src/drivers/stm32f4xx_gpio.c
+src/drivers/stm32f4xx_gpio.c: In function 'GPIO_PinLockConfig':
+src/drivers/stm32f4xx_gpio.c:282:3: warning: implicit declaration of function 'assert_param'; did you mean 'assert'? [-Wimplicit-function-declaration]
+   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+   ^~~~~~~~~~~~
+   assert
+Packing library
+Build not configured correctly
+21:26:48 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+Linking objects
+arm-none-eabi-gcc  -mthumb -mthumb-interwork -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -T D:\USB_Audio\Software\Code\test2\/build\STM32F401RETX_FLASH.ld --specs=nosys.specs -u _printf_float -Wl,--gc-sections -static --specs=nano.specs -Wl,-Map=bin/test-d.map  -LC:\Users\zeont\git\STM32F4_lib\lib -o bin/test-d.elf obj/main-d.o   -l-d
+21:26:59 **** Incremental Build of configuration DEBUG for project STM32F4_lib ****
+make -k -j4 all 
+Make version = 3.81
+Build = DEBUG
+MCU sub-family = STM32F401xx
+Building lib-d.a
+A subdirectory or file obj\CMSIS\ already exists.
+Error occurred while processing: obj\CMSIS\.
+A subdirectory or file obj\drivers\ already exists.
+Error occurred while processing: obj\drivers\.
+A subdirectory or file lib already exists.
+Error occurred while processing: lib.
+Compiling src/drivers/stm32f4xx_gpio.c
+src/drivers/stm32f4xx_gpio.c: In function 'GPIO_ReadInputDataBit':
+src/drivers/stm32f4xx_gpio.c:328:3: warning: implicit declaration of function 'assert_param'; did you mean 'assert'? [-Wimplicit-function-declaration]
+   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+   ^~~~~~~~~~~~
+   assert
+Packing library
+Build not configured correctly
+21:27:00 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+Linking objects
+arm-none-eabi-gcc  -mthumb -mthumb-interwork -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -T D:\USB_Audio\Software\Code\test2\/build\STM32F401RETX_FLASH.ld --specs=nosys.specs -u _printf_float -Wl,--gc-sections -static --specs=nano.specs -Wl,-Map=bin/test-d.map  -LC:\Users\zeont\git\STM32F4_lib\lib -o bin/test-d.elf obj/main-d.o   -l-d
+21:27:10 **** Incremental Build of configuration DEBUG for project STM32F4_lib ****
+make -k -j4 all 
+Make version = 3.81
+Build = DEBUG
+MCU sub-family = STM32F401xx
+Building lib-d.a
+A subdirectory or file obj\CMSIS\ already exists.
+Error occurred while processing: obj\CMSIS\.
+A subdirectory or file obj\drivers\ already exists.
+Error occurred while processing: obj\drivers\.
+A subdirectory or file lib already exists.
+Error occurred while processing: lib.
+Compiling src/drivers/stm32f4xx_gpio.c
+src/drivers/stm32f4xx_gpio.c: In function 'GPIO_ReadInputData':
+src/drivers/stm32f4xx_gpio.c:352:3: warning: implicit declaration of function 'assert_param'; did you mean 'assert'? [-Wimplicit-function-declaration]
+   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+   ^~~~~~~~~~~~
+   assert
+Packing library
+Build not configured correctly
+21:27:11 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+Linking objects
+arm-none-eabi-gcc  -mthumb -mthumb-interwork -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -T D:\USB_Audio\Software\Code\test2\/build\STM32F401RETX_FLASH.ld --specs=nosys.specs -u _printf_float -Wl,--gc-sections -static --specs=nano.specs -Wl,-Map=bin/test-d.map  -LC:\Users\zeont\git\STM32F4_lib\lib -o bin/test-d.elf obj/main-d.o   -l-d
+Build not configured correctly
+21:27:24 **** Incremental Build of configuration DEBUG for project STM32F4_lib ****
+make -k -j4 all 
+Make version = 3.81
+Build = DEBUG
+MCU sub-family = STM32F401xx
+Building lib-d.a
+A subdirectory or file obj\CMSIS\ already exists.
+Error occurred while processing: obj\CMSIS\.
+A subdirectory or file obj\drivers\ already exists.
+Error occurred while processing: obj\drivers\.
+A subdirectory or file lib already exists.
+Error occurred while processing: lib.
+Compiling src/drivers/stm32f4xx_gpio.c
+src/drivers/stm32f4xx_gpio.c: In function 'GPIO_ReadOutputData':
+src/drivers/stm32f4xx_gpio.c:395:3: warning: implicit declaration of function 'assert_param'; did you mean 'assert'? [-Wimplicit-function-declaration]
+   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+   ^~~~~~~~~~~~
+   assert
+Packing library
+Build not configured correctly
+21:27:26 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+Linking objects
+arm-none-eabi-gcc  -mthumb -mthumb-interwork -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -T D:\USB_Audio\Software\Code\test2\/build\STM32F401RETX_FLASH.ld --specs=nosys.specs -u _printf_float -Wl,--gc-sections -static --specs=nano.specs -Wl,-Map=bin/test-d.map  -LC:\Users\zeont\git\STM32F4_lib\lib -o bin/test-d.elf obj/main-d.o   -l-d
+Build not configured correctly
+21:27:31 **** Incremental Build of configuration DEBUG for project STM32F4_lib ****
+make -k -j4 all 
+Make version = 3.81
+Build = DEBUG
+MCU sub-family = STM32F401xx
+Building lib-d.a
+A subdirectory or file obj\CMSIS\ already exists.
+Error occurred while processing: obj\CMSIS\.
+A subdirectory or file obj\drivers\ already exists.
+Error occurred while processing: obj\drivers\.
+A subdirectory or file lib already exists.
+Error occurred while processing: lib.
+Compiling src/drivers/stm32f4xx_gpio.c
+src/drivers/stm32f4xx_gpio.c: In function 'GPIO_SetBits':
+src/drivers/stm32f4xx_gpio.c:415:3: warning: implicit declaration of function 'assert_param'; did you mean 'assert'? [-Wimplicit-function-declaration]
+   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+   ^~~~~~~~~~~~
+   assert
+Packing library
+Build not configured correctly
+21:27:32 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+Linking objects
+arm-none-eabi-gcc  -mthumb -mthumb-interwork -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -T D:\USB_Audio\Software\Code\test2\/build\STM32F401RETX_FLASH.ld --specs=nosys.specs -u _printf_float -Wl,--gc-sections -static --specs=nano.specs -Wl,-Map=bin/test-d.map  -LC:\Users\zeont\git\STM32F4_lib\lib -o bin/test-d.elf obj/main-d.o   -l-d
+21:28:01 **** Incremental Build of configuration DEBUG for project STM32F4_lib ****
+make -k -j4 all 
+Make version = 3.81
+Build = DEBUG
+MCU sub-family = STM32F401xx
+Building lib-d.a
+A subdirectory or file obj\CMSIS\ already exists.
+Error occurred while processing: obj\CMSIS\.
+A subdirectory or file obj\drivers\ already exists.
+Error occurred while processing: obj\drivers\.
+A subdirectory or file lib already exists.
+Error occurred while processing: lib.
+Compiling src/drivers/stm32f4xx_gpio.c
+src/drivers/stm32f4xx_gpio.c: In function 'GPIO_Write':
+src/drivers/stm32f4xx_gpio.c:483:3: warning: implicit declaration of function 'assert_param'; did you mean 'assert'? [-Wimplicit-function-declaration]
+   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+   ^~~~~~~~~~~~
+   assert
+Packing library
+Build not configured correctly
+21:28:02 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+Linking objects
+arm-none-eabi-gcc  -mthumb -mthumb-interwork -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -T D:\USB_Audio\Software\Code\test2\/build\STM32F401RETX_FLASH.ld --specs=nosys.specs -u _printf_float -Wl,--gc-sections -static --specs=nano.specs -Wl,-Map=bin/test-d.map  -LC:\Users\zeont\git\STM32F4_lib\lib -o bin/test-d.elf obj/main-d.o   -l-d
+Build not configured correctly
+21:28:08 **** Incremental Build of configuration DEBUG for project STM32F4_lib ****
+make -k -j4 all 
+Make version = 3.81
+Build = DEBUG
+MCU sub-family = STM32F401xx
+Building lib-d.a
+A subdirectory or file obj\CMSIS\ already exists.
+Error occurred while processing: obj\CMSIS\.
+A subdirectory or file obj\drivers\ already exists.
+Error occurred while processing: obj\drivers\.
+A subdirectory or file lib already exists.
+Error occurred while processing: lib.
+Compiling src/drivers/stm32f4xx_gpio.c
+src/drivers/stm32f4xx_gpio.c: In function 'GPIO_ToggleBits':
+src/drivers/stm32f4xx_gpio.c:499:3: warning: implicit declaration of function 'assert_param'; did you mean 'assert'? [-Wimplicit-function-declaration]
+   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+   ^~~~~~~~~~~~
+   assert
+Packing library
+Build not configured correctly
+21:28:09 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+Linking objects
+arm-none-eabi-gcc  -mthumb -mthumb-interwork -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -T D:\USB_Audio\Software\Code\test2\/build\STM32F401RETX_FLASH.ld --specs=nosys.specs -u _printf_float -Wl,--gc-sections -static --specs=nano.specs -Wl,-Map=bin/test-d.map  -LC:\Users\zeont\git\STM32F4_lib\lib -o bin/test-d.elf obj/main-d.o   -l-d
+Build not configured correctly
+21:28:16 **** Incremental Build of configuration DEBUG for project STM32F4_lib ****
+make -k -j4 all 
+Make version = 3.81
+Build = DEBUG
+MCU sub-family = STM32F401xx
+Building lib-d.a
+A subdirectory or file obj\CMSIS\ already exists.
+Error occurred while processing: obj\CMSIS\.
+A subdirectory or file obj\drivers\ already exists.
+Error occurred while processing: obj\drivers\.
+A subdirectory or file lib already exists.
+Error occurred while processing: lib.
+Compiling src/drivers/stm32f4xx_gpio.c
+src/drivers/stm32f4xx_gpio.c: In function 'GPIO_PinAFConfig':
+src/drivers/stm32f4xx_gpio.c:585:3: warning: implicit declaration of function 'assert_param'; did you mean 'assert'? [-Wimplicit-function-declaration]
+   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+   ^~~~~~~~~~~~
+   assert
+Packing library
+Build not configured correctly
+21:28:17 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+Linking objects
+arm-none-eabi-gcc  -mthumb -mthumb-interwork -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -T D:\USB_Audio\Software\Code\test2\/build\STM32F401RETX_FLASH.ld --specs=nosys.specs -u _printf_float -Wl,--gc-sections -static --specs=nano.specs -Wl,-Map=bin/test-d.map  -LC:\Users\zeont\git\STM32F4_lib\lib -o bin/test-d.elf obj/main-d.o   -l-d
+21:28:27 **** Incremental Build of configuration DEBUG for project STM32F4_lib ****
+make -k -j4 all 
+Make version = 3.81
+Build = DEBUG
+MCU sub-family = STM32F401xx
+Building lib-d.a
+A subdirectory or file obj\CMSIS\ already exists.
+Error occurred while processing: obj\CMSIS\.
+A subdirectory or file obj\drivers\ already exists.
+Error occurred while processing: obj\drivers\.
+A subdirectory or file lib already exists.
+Error occurred while processing: lib.
+Compiling src/drivers/stm32f4xx_gpio.c
+Packing library
+Build not configured correctly
+21:28:28 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+Linking objects
+arm-none-eabi-gcc  -mthumb -mthumb-interwork -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -T D:\USB_Audio\Software\Code\test2\/build\STM32F401RETX_FLASH.ld --specs=nosys.specs -u _printf_float -Wl,--gc-sections -static --specs=nano.specs -Wl,-Map=bin/test-d.map  -LC:\Users\zeont\git\STM32F4_lib\lib -o bin/test-d.elf obj/main-d.o   -l-d
+Build not configured correctly
+21:34:39 **** Incremental Build of configuration DEBUG for project STM32F4_lib ****
+make -k -j4 all 
+Make version = 3.81
+Build = DEBUG
+MCU sub-family = STM32F401xx
+Building lib-d.a
+A subdirectory or file obj\CMSIS\ already exists.
+Error occurred while processing: obj\CMSIS\.
+A subdirectory or file obj\drivers\ already exists.
+Error occurred while processing: obj\drivers\.
+A subdirectory or file lib already exists.
+Error occurred while processing: lib.
+Compiling src/drivers/stm32f4xx_gpio.c
+Packing library
+Build not configured correctly
+21:34:40 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+Linking objects
+arm-none-eabi-gcc  -mthumb -mthumb-interwork -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -T D:\USB_Audio\Software\Code\test2\/build\STM32F401RETX_FLASH.ld --specs=nosys.specs -u _printf_float -Wl,--gc-sections -static --specs=nano.specs -Wl,-Map=bin/test-d.map  -LC:\Users\zeont\git\STM32F4_lib\lib -o bin/test-d.elf obj/main-d.o   -l-d
+Build not configured correctly
+21:35:08 **** Incremental Build of configuration DEBUG for project STM32F4_lib ****
+make -k -j4 all 
+Make version = 3.81
+Build = DEBUG
+MCU sub-family = STM32F401xx
+Building lib-d.a
+A subdirectory or file obj\CMSIS\ already exists.
+Error occurred while processing: obj\CMSIS\.
+A subdirectory or file obj\drivers\ already exists.
+Error occurred while processing: obj\drivers\.
+A subdirectory or file lib already exists.
+Error occurred while processing: lib.
+Compiling src/drivers/stm32f4xx_gpio.c
+Packing library
+Build not configured correctly
+21:35:10 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+Linking objects
+arm-none-eabi-gcc  -mthumb -mthumb-interwork -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -T D:\USB_Audio\Software\Code\test2\/build\STM32F401RETX_FLASH.ld --specs=nosys.specs -u _printf_float -Wl,--gc-sections -static --specs=nano.specs -Wl,-Map=bin/test-d.map  -LC:\Users\zeont\git\STM32F4_lib\lib -o bin/test-d.elf obj/main-d.o   -l-d

@@ -1,0 +1,1 @@
+src/drivers/stm32f4xx_fsmc.o: ../src/drivers/stm32f4xx_fsmc.c

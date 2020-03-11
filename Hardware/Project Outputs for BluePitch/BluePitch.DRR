@@ -1,0 +1,23 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: BluePitch.PcbDoc   5/2/2020  17:50:14
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII Plated RoundHoles File : BluePitch-Plated.TXT
+ASCII Non-Plated RoundHoles File : BluePitch-NonPlated.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      12mil (0.3mm)                                             Round             1181      PTH        0.00inch (0.00mm)
+T2      20mil (0.52mm)                                            Round             10        PTH        0.00inch (0.00mm)
+T3      24mil (0.6mm)                                             Round             4         PTH        0.00inch (0.00mm)
+T4      30mil (0.75mm)                                            Round             2         PTH        0.00inch (0.00mm)
+T5      35mil (0.9mm)                                             Round             2         PTH        0.00inch (0.00mm)
+T6      40mil (1.02mm)                                            Round             8         PTH        0.00inch (0.00mm)
+T7      47mil (1.2mm)                                             Round             2         PTH        0.00inch (0.00mm)
+T8      79mil (2mm)                                               Round             2         PTH        0.00inch (0.00mm)
+T9      79mil (2mm)                                               Round             4         NPTH       0.00inch (0.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              1215
+
+Total Processing Time (hh:mm:ss) : 00:00:01

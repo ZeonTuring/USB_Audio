@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [BluePitch.PrjPCB]
+   Generated File[BluePitch-Plated.TXT]
+   Generated File[BluePitch-NonPlated.TXT]
+   Generated File[BluePitch.LDP]
+   Generated File[BluePitch.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 17:50:15 On 5/2/2020

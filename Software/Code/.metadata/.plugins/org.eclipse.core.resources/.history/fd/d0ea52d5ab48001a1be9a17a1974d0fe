@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1823067230/BUILD_MODE/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1823067230/BUILD_MODE/operation=append
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1823067230/BUILD_MODE/value=DEBUG
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1823067230/MCU/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1823067230/MCU/operation=append
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1823067230/MCU/value=STM32F401
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1823067230/append=true
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1823067230/appendContributed=true

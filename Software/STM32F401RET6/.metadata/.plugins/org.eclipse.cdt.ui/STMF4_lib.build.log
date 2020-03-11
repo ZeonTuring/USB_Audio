@@ -1,0 +1,17 @@
+11:33:46 **** Build of configuration Default for project STMF4_lib ****
+make all 
+MCU sub-family = STM32F401xx
+arm-none-eabi-gcc -c -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -DSTM32F401xx -DARM_MATH_CM4 -ICMSIS/Device/ST/STM32F4xx/Include -ICMSIS/Include -ICMSIS/RTOS/Template/ -IDriver/inc -Og -Wall -fdata-sections -ffunction-sections -g -gdwarf-2 -MMD -MP -MF"obj/stm32f4xx_gpio.d" -Wa,-a,-ad,-alms=obj/stm32f4xx_gpio.lst Driver/src/stm32f4xx_gpio.c -o obj/stm32f4xx_gpio.o
+Driver/src/stm32f4xx_gpio.c: In function 'GPIO_DeInit':
+Driver/src/stm32f4xx_gpio.c:130:3: warning: implicit declaration of function 'assert_param' [-Wimplicit-function-declaration]
+   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+   ^~~~~~~~~~~~
+Driver/src/stm32f4xx_gpio.c: In function 'GPIO_Init':
+Driver/src/stm32f4xx_gpio.c:214:75: error: invalid operands to binary >> (have 'uint32_t * {aka long unsigned int *}' and 'int')
+   RCC_AHB1PeriphClockCmd((uint32_t)((((uint32_t*)GPIOx - AHB1PERIPH_BASE) >> 10) + 1),ENABLE);
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^~
+make: *** [Makefile:159: obj/stm32f4xx_gpio.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+11:33:51 Build Failed. 2 errors, 1 warnings. (took 5s.6ms)
+

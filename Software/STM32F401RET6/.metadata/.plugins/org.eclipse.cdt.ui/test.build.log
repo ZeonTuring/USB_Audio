@@ -1,0 +1,14 @@
+12:02:59 **** Incremental Build of configuration Debug for project test ****
+make -k -j4 all 
+Make version = 4.2.1_st_20190816-0744_longpath
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+make: Nothing to be done for 'all'.
+
+12:02:59 Build Finished. 0 errors, 0 warnings. (took 218ms)
+

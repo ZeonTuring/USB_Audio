@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1534950969/BUILD_MODE/delimiter=;
+environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1534950969/BUILD_MODE/operation=append
+environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1534950969/BUILD_MODE/value=DEBUG
+environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1534950969/LIB_PATH/delimiter=;
+environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1534950969/LIB_PATH/operation=append
+environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1534950969/LIB_PATH/value=D\:\\STMLibrary\\STM32F4_Lib
+environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1534950969/MCU_MODEL/delimiter=;
+environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1534950969/MCU_MODEL/operation=append
+environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1534950969/MCU_MODEL/value=STM32F401xx
+environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1534950969/append=true
+environment/project/com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1534950969/appendContributed=true

@@ -1,0 +1,19 @@
+21:35:10 **** Incremental Build of configuration Debug for project test2 ****
+make -k -j4 all 
+Make version = 3.81
+User include paths = inc src
+User lib paths = 
+User libs = 
+User symbols = 
+Build = DEBUG
+MCU sub-family = STM32F401
+Building test-d.elf
+A subdirectory or file obj\ already exists.
+Error occurred while processing: obj\.
+A subdirectory or file bin already exists.
+Error occurred while processing: bin.
+Linking objects
+arm-none-eabi-gcc  -mthumb -mthumb-interwork -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -T D:\USB_Audio\Software\Code\test2\/build\STM32F401RETX_FLASH.ld --specs=nosys.specs -u _printf_float -Wl,--gc-sections -static --specs=nano.specs -Wl,-Map=bin/test-d.map  -LC:\Users\zeont\git\STM32F4_lib\lib -o bin/test-d.elf obj/main-d.o   -l-d
+
+21:35:10 Build Finished. 0 errors, 0 warnings. (took 643ms)
+

@@ -1,0 +1,7 @@
+Added Pin To Net: NetName=VCHG Pin=C8-2
+Added Pin To Net: NetName=VCHG Pin=C9-2
+Added Pin To Net: NetName=VCHG Pin=D1-A
+Added Pin To Net: NetName=VCHG Pin=D2-A
+Added Pin To Net: NetName=VCHG Pin=P5-1
+Added Pin To Net: NetName=VCHG Pin=U1-4
+Added Net: Name=VCHG

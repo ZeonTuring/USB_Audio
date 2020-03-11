@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=AMP_AGND Pin=C40-1
+Removed Pin From Net: NetName=OPVCC_5V Pin=C40-2
+Removed Pin From Net: NetName=AVCCR_5V Pin=C46-1
+Removed Pin From Net: NetName=OPVCC_5V Pin=C46-2
+Removed Pin From Net: NetName=AMP_AGND Pin=C47-1
+Removed Pin From Net: NetName=OPVCC_5V Pin=C47-2
+Removed Member From Class: ClassName=U_IV_Converter Member=C40
+Removed Member From Class: ClassName=U_IV_Converter Member=C46
+Removed Member From Class: ClassName=U_IV_Converter Member=C47

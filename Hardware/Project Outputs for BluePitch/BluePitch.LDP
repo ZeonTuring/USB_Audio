@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: D:\USB_Audio\Hardware\BluePitch.PcbDoc
+LayersSetName=Top_Bot_Plated_Thru_Holes|DrillFile=bluepitch-plated.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_NonPlated_Thru_Holes|DrillFile=bluepitch-nonplated.txt|DrillLayers=gtl,gbl

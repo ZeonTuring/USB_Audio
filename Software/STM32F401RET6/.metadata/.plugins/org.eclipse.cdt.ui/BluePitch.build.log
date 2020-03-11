@@ -1,0 +1,20 @@
+11:04:39 **** Incremental Build of configuration Debug for project BluePitch ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../USB_DEVICE/Target -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../USB_DEVICE/App -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc -o "BluePitch.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\USB_Audio\Software\STM32F401RET6\BluePitch\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BluePitch.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BluePitch.elf
+ 
+arm-none-eabi-objdump -h -S  BluePitch.elf  > "BluePitch.list"
+arm-none-eabi-objcopy  -O binary  BluePitch.elf  "BluePitch.bin"
+arm-none-eabi-size   BluePitch.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36648	    408	  23000	  60056	   ea98	BluePitch.elf
+Finished building: default.size.stdout
+ 
+Finished building: BluePitch.bin
+ 
+Finished building: BluePitch.list
+ 
+
+11:04:41 Build Finished. 0 errors, 0 warnings. (took 2s.472ms)
+

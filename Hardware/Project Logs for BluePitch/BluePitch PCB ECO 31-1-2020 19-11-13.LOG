@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=DAC_3V3 Pin=C23-1
+Added Pin To Net: NetName=DAC_3V3 Pin=C24-1
+Added Pin To Net: NetName=DAC_3V3 Pin=C25-1
+Added Pin To Net: NetName=DAC_3V3 Pin=C26-1
+Added Pin To Net: NetName=DAC_3V3 Pin=U3-13

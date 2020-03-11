@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=NetC45_2 Pin=U5-5
+Removed Pin From Net: NetName=NetC41_1 Pin=U5-6
+Added Pin To Net: NetName=NetC41_1 Pin=U5-5
+Added Pin To Net: NetName=NetC45_2 Pin=U5-6
+Change Net Name : Old Net Name=GND New Net Name=AMP_GND

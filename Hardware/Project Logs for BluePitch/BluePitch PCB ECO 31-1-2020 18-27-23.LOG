@@ -1,0 +1,6 @@
+Change Net Name : Old Net Name=NetC32_1 New Net Name=OUTL_P
+Change Net Name : Old Net Name=NetC36_1 New Net Name=OUTL_N
+Change Net Name : Old Net Name=NetC39_1 New Net Name=OUTR_P
+Change Net Name : Old Net Name=NetC44_1 New Net Name=OUTR_N
+Added Differential Pair: Name=OUTL
+Added Differential Pair: Name=OUTR

@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=AGND Pin=NT7-1
+Removed Member From Class: ClassName=BluePitch Member=NT7
+Added Component: Designator=NT4(NT_20)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=PAGND Pin=NT4-1
+Added Pin To Net: NetName=AGND Pin=NT4-2
+Added Pin To Net: NetName=AGND Pin=P4-4
+Added Member To Class: ClassName=BluePitch Member=Component NT4 NetTie

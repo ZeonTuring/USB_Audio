@@ -1,0 +1,9 @@
+Change Net Name : Old Net Name=NetP2_2 New Net Name=USB_N
+Change Net Name : Old Net Name=NetP2_3 New Net Name=USB_P
+Added Differential Pair: Name=USB
+Added Room: Name=BluePitch
+Added Room: Name=U_Charger
+Added Room: Name=U_DAC
+Added Room: Name=U_Decoder
+Added Room: Name=U_IV_Converter
+Added Room: Name=U_Power

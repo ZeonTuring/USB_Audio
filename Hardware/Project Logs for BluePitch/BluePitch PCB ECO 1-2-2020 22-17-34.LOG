@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=AVCCR_5V Pin=C54-2
+Removed Pin From Net: NetName=OPVCC_5V Pin=P4-4
+Removed Pin From Net: NetName=AVCCR_5V Pin=U9-9
+Removed Pin From Net: NetName=AVCCR_5V Pin=U9-10
+Added Pin To Net: NetName=OPVCC_5V Pin=C54-2
+Added Pin To Net: NetName=AVCCR_5V Pin=P4-4
+Added Pin To Net: NetName=OPVCC_5V Pin=U9-9
+Added Pin To Net: NetName=OPVCC_5V Pin=U9-10
+Change Net Name : Old Net Name=AVCCR_5V New Net Name=GND
+Change Net Name : Old Net Name=OPVCC_5V New Net Name=AVCCR_5V
+Change Differential Pair Positive Net Name : Old Net Name=OUTR_P New Net Name=OUTR_P
+Change Differential Pair Negative Net Name : Old Net Name=OUTR_N New Net Name=OUTR_N

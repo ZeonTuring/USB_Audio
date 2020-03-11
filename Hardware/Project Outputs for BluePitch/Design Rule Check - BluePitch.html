@@ -1,0 +1,830 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD19\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">5/2/2020</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">17:38:13</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\USB_Audio\Hardware\BluePitch.PcbDoc" class="file"><acronym title="D:\USB_Audio\Hardware\BluePitch.PcbDoc">D:\USB_Audio\Hardware\BluePitch.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">166</td></tr>
+</table>
+</td>
+</table><a name="ID24A1MAEZ0JDKKGDD5OQAYZQQMLVC0LNEK3COVCPXN2DKENIQ0CL"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAUX2JJCCT3PDG05TOW2X2TFYEMBAVRXHX02SNW3TLZG1EQTEFI">Clearance Constraint (Gap=0mil) (IsNetTieComponent),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2ZUSQX5WYYL1ION1I1EBU0PUXL3L2A5VPXUJWAFXQKMY3SYJF1YE">Clearance Constraint (Gap=5mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDIXAKE1NHGDQKQTQKJD3RK2RJ1AGUW25X3QSAGK5GEP5SPKMJVE">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5NWB51V4O3UEMHUE55KBUM1GKNXNTIIGSMKN0EFTJ5K4H2MMOHHF">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEE4OWZDOLRMZKPLNFYGLQEPIBK2VUX0AAYNXR4OJS4G2Q3N0YEGJ">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFOMKT5L4KJVNNZ20S5GO0H0ZXHTFDJGNNFP0F1I223RWMI2O1RDE">Width Constraint (Min=6mil) (Max=200mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4BOFYL1XESE4BXSWVSI2RVPBJISJ11ZFLVMBIF3HFQYASZGQWRC">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDCFVMAVGOVCQPURAAVA1V0DYGLXUNM3SP3UAI4NYEOM01FLPUUMG">Hole Size Constraint (Min=1mil) (Max=196.85mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRQZKAERE3L5OF20N2RODZQS31BNBVLY1YNIJCBMG5CWQWPBBJO2O">Hole To Hole Clearance (Gap=6mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLLJCZSRDR2KZCJBAKK5GZKEBXLRFK3S2LMV4H5EXXHPIZA3N3TZM">Minimum Solder Mask Sliver (Gap=6mil) (All),(All)</a></td>
+<td class="column2">166</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID5FOUV2QCISHGIG0SHN1L4NCOFPF0MCOAU4ZGDK1CBLZOHXHLTJC">Silk To Solder Mask (Clearance=0mil) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDV2QH4CT4FG1JTE5OSOW11ZH2LGCN23PYK2IS1HP3MGQGFRDHQ3M">Silk to Silk (Clearance=0mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLUGBK2GKW3N4G2RXYP0JPWIMZEOXWSJ153JPOYJMOAEDXPW2PILI">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAYJBDD0KW2A3L0MIRGXF2PNKCGDAISIFBDI0YJEFGUWLJ4XWCSGO">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">166</td>
+</tr>
+</table><br><a name="IDLLJCZSRDR2KZCJBAKK5GZKEBXLRFK3S2LMV4H5EXXHPIZA3N3TZM"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=6mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5068.981mil|Location2.X=5076.231mil|Location1.Y=3749.643mil|Location2.Y=3756.893mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5068.981mil|Location2.X=5076.231mil|Location1.Y=3749.643mil|Location2.Y=3756.893mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C12-1(-1912.599mil,-1230mil) on Top Layer And Pad C12-2(-1912.598mil,-1263.465mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5543.58mil|Location2.X=5550.83mil|Location1.Y=3962.493mil|Location2.Y=3969.743mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5543.58mil|Location2.X=5550.83mil|Location1.Y=3962.493mil|Location2.Y=3969.743mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C14-1(-1438mil,-1050.614mil) on Top Layer And Pad C14-2(-1437.999mil,-1017.15mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5068.482mil|Location2.X=5075.732mil|Location1.Y=4065.682mil|Location2.Y=4072.932mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5068.482mil|Location2.X=5075.732mil|Location1.Y=4065.682mil|Location2.Y=4072.932mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C17-1(-1913.098mil,-947.426mil) on Top Layer And Pad C17-2(-1913.098mil,-913.961mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6005.997mil|Location2.X=6013.247mil|Location1.Y=4056.517mil|Location2.Y=4063.767mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6005.997mil|Location2.X=6013.247mil|Location1.Y=4056.517mil|Location2.Y=4063.767mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C19-1(-973.646mil,-925.063mil) on Bottom Layer And Pad C19-2(-1007.11mil,-925.063mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6006.265mil|Location2.X=6013.515mil|Location1.Y=4011.517mil|Location2.Y=4018.767mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6006.265mil|Location2.X=6013.515mil|Location1.Y=4011.517mil|Location2.Y=4018.767mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C20-1(-973.378mil,-970.063mil) on Bottom Layer And Pad C20-2(-1006.842mil,-970.063mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6005.997mil|Location2.X=6013.247mil|Location1.Y=3966.517mil|Location2.Y=3973.767mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6005.997mil|Location2.X=6013.247mil|Location1.Y=3966.517mil|Location2.Y=3973.767mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C21-1(-973.646mil,-1015.063mil) on Bottom Layer And Pad C21-2(-1007.11mil,-1015.063mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5741.69mil|Location2.X=5748.94mil|Location1.Y=4511.58mil|Location2.Y=4518.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5741.69mil|Location2.X=5748.94mil|Location1.Y=4511.58mil|Location2.Y=4518.83mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C22-1(-1271.417mil,-470mil) on Top Layer And Pad C22-2(-1237.952mil,-470mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6110.202mil|Location2.X=6117.452mil|Location1.Y=3842.729mil|Location2.Y=3849.979mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6110.202mil|Location2.X=6117.452mil|Location1.Y=3842.729mil|Location2.Y=3849.979mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C23-1(-871.377mil,-1170.378mil) on Bottom Layer And Pad C23-2(-871.377mil,-1136.913mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6064.99mil|Location2.X=6072.24mil|Location1.Y=3842.729mil|Location2.Y=3849.979mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6064.99mil|Location2.X=6072.24mil|Location1.Y=3842.729mil|Location2.Y=3849.979mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C24-1(-916.59mil,-1170.378mil) on Bottom Layer And Pad C24-2(-916.59mil,-1136.913mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6019.478mil|Location2.X=6026.728mil|Location1.Y=3842.729mil|Location2.Y=3849.979mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6019.478mil|Location2.X=6026.728mil|Location1.Y=3842.729mil|Location2.Y=3849.979mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C25-1(-962.102mil,-1170.378mil) on Bottom Layer And Pad C25-2(-962.102mil,-1136.913mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5974.202mil|Location2.X=5981.452mil|Location1.Y=3842.729mil|Location2.Y=3849.979mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5974.202mil|Location2.X=5981.452mil|Location1.Y=3842.729mil|Location2.Y=3849.979mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C26-1(-1007.377mil,-1170.378mil) on Bottom Layer And Pad C26-2(-1007.377mil,-1136.913mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6291.202mil|Location2.X=6298.452mil|Location1.Y=4050.312mil|Location2.Y=4057.562mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6291.202mil|Location2.X=6298.452mil|Location1.Y=4050.312mil|Location2.Y=4057.562mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C27-1(-690.378mil,-962.795mil) on Bottom Layer And Pad C27-2(-690.378mil,-929.331mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6245.705mil|Location2.X=6252.955mil|Location1.Y=4050.312mil|Location2.Y=4057.562mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6245.705mil|Location2.X=6252.955mil|Location1.Y=4050.312mil|Location2.Y=4057.562mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C28-1(-735.874mil,-962.795mil) on Bottom Layer And Pad C28-2(-735.874mil,-929.331mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6258.194mil|Location2.X=6265.444mil|Location1.Y=3738.58mil|Location2.Y=3745.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6258.194mil|Location2.X=6265.444mil|Location1.Y=3738.58mil|Location2.Y=3745.83mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C29-1(-721.449mil,-1243mil) on Bottom Layer And Pad C29-2(-754.913mil,-1243mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6290.926mil|Location2.X=6298.176mil|Location1.Y=3829.855mil|Location2.Y=3837.105mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6290.926mil|Location2.X=6298.176mil|Location1.Y=3829.855mil|Location2.Y=3837.105mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C30-1(-688.716mil,-1151.725mil) on Bottom Layer And Pad C30-2(-722.181mil,-1151.725mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6290.926mil|Location2.X=6298.176mil|Location1.Y=3784.58mil|Location2.Y=3791.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6290.926mil|Location2.X=6298.176mil|Location1.Y=3784.58mil|Location2.Y=3791.83mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C31-1(-688.716mil,-1197mil) on Bottom Layer And Pad C31-2(-722.181mil,-1197mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4392.619mil|Location2.X=4399.869mil|Location1.Y=3563.056mil|Location2.Y=3570.306mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4392.619mil|Location2.X=4399.869mil|Location1.Y=3563.056mil|Location2.Y=3570.306mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C34-1(-2588.961mil,-1450.051mil) on Bottom Layer And Pad C34-2(-2588.961mil,-1416.586mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3840.58mil|Location2.X=3847.83mil|Location1.Y=3926.107mil|Location2.Y=3933.357mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3840.58mil|Location2.X=3847.83mil|Location1.Y=3926.107mil|Location2.Y=3933.357mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C38-1(-3141mil,-1087mil) on Bottom Layer And Pad C38-2(-3141mil,-1053.535mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4394.58mil|Location2.X=4401.83mil|Location1.Y=4278.922mil|Location2.Y=4286.172mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4394.58mil|Location2.X=4401.83mil|Location1.Y=4278.922mil|Location2.Y=4286.172mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C42-1(-2587mil,-734.185mil) on Bottom Layer And Pad C42-2(-2587mil,-700.721mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6034.583mil|Location2.X=6041.833mil|Location1.Y=4769.37mil|Location2.Y=4776.62mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6034.583mil|Location2.X=6041.833mil|Location1.Y=4769.37mil|Location2.Y=4776.62mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C5-1(-946.997mil,-243.737mil) on Bottom Layer And Pad C5-2(-946.997mil,-210.273mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6190.417mil|Location2.X=6197.667mil|Location1.Y=4769.37mil|Location2.Y=4776.62mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6190.417mil|Location2.X=6197.667mil|Location1.Y=4769.37mil|Location2.Y=4776.62mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C6-1(-791.163mil,-243.737mil) on Bottom Layer And Pad C6-2(-791.163mil,-210.272mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4542.58mil|Location2.X=4549.83mil|Location1.Y=3530.107mil|Location2.Y=3537.357mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4542.58mil|Location2.X=4549.83mil|Location1.Y=3530.107mil|Location2.Y=3537.357mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C69-1(-2439mil,-1449.535mil) on Bottom Layer And Pad C69-2(-2439mil,-1483mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4542.619mil|Location2.X=4549.869mil|Location1.Y=4245.643mil|Location2.Y=4252.893mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4542.619mil|Location2.X=4549.869mil|Location1.Y=4245.643mil|Location2.Y=4252.893mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C70-1(-2438.961mil,-734mil) on Bottom Layer And Pad C70-2(-2438.961mil,-767.465mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6346.417mil|Location2.X=6353.667mil|Location1.Y=4769.37mil|Location2.Y=4776.62mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6346.417mil|Location2.X=6353.667mil|Location1.Y=4769.37mil|Location2.Y=4776.62mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C7-1(-635.163mil,-243.737mil) on Bottom Layer And Pad C7-2(-635.163mil,-210.272mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3989.58mil|Location2.X=3996.83mil|Location1.Y=3891.643mil|Location2.Y=3898.893mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3989.58mil|Location2.X=3996.83mil|Location1.Y=3891.643mil|Location2.Y=3898.893mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad C71-1(-2992mil,-1121.465mil) on Bottom Layer And Pad C71-2(-2992mil,-1088mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6758.769mil|Location2.X=6766.019mil|Location1.Y=2236.577mil|Location2.Y=2243.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6758.769mil|Location2.X=6766.019mil|Location1.Y=2236.577mil|Location2.Y=2243.827mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad R1-1(-220.874mil,-2745.003mil) on Top Layer And Pad R1-2(-254.339mil,-2745.003mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6328.552mil|Location2.X=6335.802mil|Location1.Y=2236.58mil|Location2.Y=2243.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6328.552mil|Location2.X=6335.802mil|Location1.Y=2236.58mil|Location2.Y=2243.83mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad R2-1(-651.091mil,-2745mil) on Top Layer And Pad R2-2(-684.555mil,-2745mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4987.95mil|Location2.X=4995.2mil|Location1.Y=2921.972mil|Location2.Y=2929.222mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4987.95mil|Location2.X=4995.2mil|Location1.Y=2921.972mil|Location2.Y=2929.222mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad R27-1(-1993.63mil,-2091.136mil) on Top Layer And Pad R27-2(-1993.63mil,-2057.671mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4987.95mil|Location2.X=4995.2mil|Location1.Y=2845.2mil|Location2.Y=2852.45mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4987.95mil|Location2.X=4995.2mil|Location1.Y=2845.2mil|Location2.Y=2852.45mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad R28-1(-1993.63mil,-2167.907mil) on Top Layer And Pad R28-2(-1993.63mil,-2134.443mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5004.65mil|Location2.X=5011.9mil|Location1.Y=3404.61mil|Location2.Y=3411.86mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5004.65mil|Location2.X=5011.9mil|Location1.Y=3404.61mil|Location2.Y=3411.86mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad R29-1(-1976.929mil,-1608.498mil) on Top Layer And Pad R29-2(-1976.929mil,-1575.033mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4994.265mil|Location2.X=5001.515mil|Location1.Y=3144.697mil|Location2.Y=3151.947mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4994.265mil|Location2.X=5001.515mil|Location1.Y=3144.697mil|Location2.Y=3151.947mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad R30-1(-1987.315mil,-1868.411mil) on Top Layer And Pad R30-2(-1987.315mil,-1834.946mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6328.552mil|Location2.X=6335.802mil|Location1.Y=2286.58mil|Location2.Y=2293.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6328.552mil|Location2.X=6335.802mil|Location1.Y=2286.58mil|Location2.Y=2293.83mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad R3-1(-651.091mil,-2695mil) on Top Layer And Pad R3-2(-684.555mil,-2695mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6496.477mil|Location2.X=6503.727mil|Location1.Y=3954.58mil|Location2.Y=3961.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6496.477mil|Location2.X=6503.727mil|Location1.Y=3954.58mil|Location2.Y=3961.83mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad R31-1(-483.166mil,-1027mil) on Top Layer And Pad R31-2(-516.63mil,-1027mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6496.477mil|Location2.X=6503.727mil|Location1.Y=4000.091mil|Location2.Y=4007.341mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6496.477mil|Location2.X=6503.727mil|Location1.Y=4000.091mil|Location2.Y=4007.341mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad R32-1(-483.165mil,-981.488mil) on Top Layer And Pad R32-2(-516.63mil,-981.488mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5004.65mil|Location2.X=5011.9mil|Location1.Y=3327.838mil|Location2.Y=3335.088mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5004.65mil|Location2.X=5011.9mil|Location1.Y=3327.838mil|Location2.Y=3335.088mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad R33-1(-1976.929mil,-1685.269mil) on Top Layer And Pad R33-2(-1976.929mil,-1651.805mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4994.265mil|Location2.X=5001.515mil|Location1.Y=3067.925mil|Location2.Y=3075.175mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4994.265mil|Location2.X=5001.515mil|Location1.Y=3067.925mil|Location2.Y=3075.175mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad R34-1(-1987.315mil,-1945.182mil) on Top Layer And Pad R34-2(-1987.315mil,-1911.718mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5895.236mil|Location2.X=5902.486mil|Location1.Y=2552.508mil|Location2.Y=2559.758mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5895.236mil|Location2.X=5902.486mil|Location1.Y=2552.508mil|Location2.Y=2559.758mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad R35-1(-1117.871mil,-2429.072mil) on Top Layer And Pad R35-2(-1084.407mil,-2429.072mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5896.236mil|Location2.X=5903.486mil|Location1.Y=2424.508mil|Location2.Y=2431.758mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5896.236mil|Location2.X=5903.486mil|Location1.Y=2424.508mil|Location2.Y=2431.758mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad R37-1(-1083.407mil,-2557.071mil) on Top Layer And Pad R37-2(-1116.871mil,-2557.071mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5714.539mil|Location2.X=5721.789mil|Location1.Y=2688.006mil|Location2.Y=2695.256mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5714.539mil|Location2.X=5721.789mil|Location1.Y=2688.006mil|Location2.Y=2695.256mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad R38-1(-1298.568mil,-2293.574mil) on Top Layer And Pad R38-2(-1265.103mil,-2293.573mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5714.811mil|Location2.X=5722.061mil|Location1.Y=2750.193mil|Location2.Y=2757.443mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5714.811mil|Location2.X=5722.061mil|Location1.Y=2750.193mil|Location2.Y=2757.443mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.842mil &lt; 6mil) Between Pad R39-1(-1264.832mil,-2231.387mil) on Top Layer And Pad R39-2(-1298.296mil,-2231.386mil) on Top Layer [Top Solder] Mask Sliver [5.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5234.643mil|Location2.X=5241.893mil|Location1.Y=3632.225mil|Location2.Y=3639.475mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5234.643mil|Location2.X=5241.893mil|Location1.Y=3632.225mil|Location2.Y=3639.475mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad R4-1(-1745mil,-1349.355mil) on Top Layer And Pad R4-2(-1778.465mil,-1349.355mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5543.58mil|Location2.X=5550.83mil|Location1.Y=4090.374mil|Location2.Y=4097.624mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5543.58mil|Location2.X=5550.83mil|Location1.Y=4090.374mil|Location2.Y=4097.624mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad R5-1(-1438mil,-889.268mil) on Top Layer And Pad R5-2(-1438mil,-922.733mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6059.414mil|Location2.X=6066.664mil|Location1.Y=4230.58mil|Location2.Y=4237.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6059.414mil|Location2.X=6066.664mil|Location1.Y=4230.58mil|Location2.Y=4237.83mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad R7-1(-920.228mil,-751mil) on Top Layer And Pad R7-2(-953.693mil,-751mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5741.69mil|Location2.X=5748.94mil|Location1.Y=4466.58mil|Location2.Y=4473.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5741.69mil|Location2.X=5748.94mil|Location1.Y=4466.58mil|Location2.Y=4473.83mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.843mil &lt; 6mil) Between Pad R8-1(-1237.953mil,-515mil) on Top Layer And Pad R8-2(-1271.417mil,-515mil) on Top Layer [Top Solder] Mask Sliver [5.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5065.284mil|Location2.X=5072.534mil|Location1.Y=3132.248mil|Location2.Y=3139.498mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5065.284mil|Location2.X=5072.534mil|Location1.Y=3132.248mil|Location2.Y=3139.498mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U10-1(-1911.898mil,-1851.332mil) on Top Layer And Pad U10-2(-1911.898mil,-1876.922mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5065.284mil|Location2.X=5072.534mil|Location1.Y=3106.657mil|Location2.Y=3113.907mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5065.284mil|Location2.X=5072.534mil|Location1.Y=3106.657mil|Location2.Y=3113.907mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U10-2(-1911.898mil,-1876.922mil) on Top Layer And Pad U10-3(-1911.898mil,-1902.513mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5065.284mil|Location2.X=5072.534mil|Location1.Y=3081.067mil|Location2.Y=3088.317mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5065.284mil|Location2.X=5072.534mil|Location1.Y=3081.067mil|Location2.Y=3088.317mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U10-3(-1911.898mil,-1902.513mil) on Top Layer And Pad U10-4(-1911.898mil,-1928.103mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5242.45mil|Location2.X=5249.7mil|Location1.Y=3081.067mil|Location2.Y=3088.317mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5242.45mil|Location2.X=5249.7mil|Location1.Y=3081.067mil|Location2.Y=3088.317mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U10-5(-1734.732mil,-1928.103mil) on Top Layer And Pad U10-6(-1734.732mil,-1902.513mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5242.45mil|Location2.X=5249.7mil|Location1.Y=3106.657mil|Location2.Y=3113.907mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5242.45mil|Location2.X=5249.7mil|Location1.Y=3106.657mil|Location2.Y=3113.907mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U10-6(-1734.732mil,-1902.513mil) on Top Layer And Pad U10-7(-1734.732mil,-1876.922mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5242.45mil|Location2.X=5249.7mil|Location1.Y=3132.248mil|Location2.Y=3139.498mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5242.45mil|Location2.X=5249.7mil|Location1.Y=3132.248mil|Location2.Y=3139.498mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U10-7(-1734.732mil,-1876.922mil) on Top Layer And Pad U10-8(-1734.732mil,-1851.332mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6700.139mil|Location2.X=6707.389mil|Location1.Y=3973.784mil|Location2.Y=3981.034mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6700.139mil|Location2.X=6707.389mil|Location1.Y=3973.784mil|Location2.Y=3981.034mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.78mil &lt; 6mil) Between Pad U11-1(-268.614mil,-1041.291mil) on Top Layer And Pad U11-2(-268.614mil,-1003.89mil) on Top Layer [Top Solder] Mask Sliver [5.78mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6700.139mil|Location2.X=6707.389mil|Location1.Y=4011.186mil|Location2.Y=4018.436mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6700.139mil|Location2.X=6707.389mil|Location1.Y=4011.186mil|Location2.Y=4018.436mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.779mil &lt; 6mil) Between Pad U11-2(-268.614mil,-1003.89mil) on Top Layer And Pad U11-3(-268.614mil,-966.488mil) on Top Layer [Top Solder] Mask Sliver [5.779mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6589.903mil|Location2.X=6597.153mil|Location1.Y=4011.186mil|Location2.Y=4018.436mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6589.903mil|Location2.X=6597.153mil|Location1.Y=4011.186mil|Location2.Y=4018.436mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.779mil &lt; 6mil) Between Pad U11-4(-378.85mil,-966.488mil) on Top Layer And Pad U11-5(-378.85mil,-1003.89mil) on Top Layer [Top Solder] Mask Sliver [5.779mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6589.903mil|Location2.X=6597.153mil|Location1.Y=3973.784mil|Location2.Y=3981.034mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6589.903mil|Location2.X=6597.153mil|Location1.Y=3973.784mil|Location2.Y=3981.034mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.78mil &lt; 6mil) Between Pad U11-5(-378.85mil,-1003.89mil) on Top Layer And Pad U11-6(-378.85mil,-1041.291mil) on Top Layer [Top Solder] Mask Sliver [5.78mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3753.831mil|Location2.Y=3761.081mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3753.831mil|Location2.Y=3761.081mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-1(-1528.331mil,-1255.339mil) on Top Layer And Pad U2-2(-1528.331mil,-1229.748mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3984.146mil|Location2.Y=3991.396mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3984.146mil|Location2.Y=3991.396mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-10(-1528.331mil,-1025.024mil) on Top Layer And Pad U2-11(-1528.331mil,-999.433mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3958.556mil|Location2.Y=3965.806mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3958.556mil|Location2.Y=3965.806mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-10(-1528.331mil,-1025.024mil) on Top Layer And Pad U2-9(-1528.331mil,-1050.615mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=4009.737mil|Location2.Y=4016.987mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=4009.737mil|Location2.Y=4016.987mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-11(-1528.331mil,-999.433mil) on Top Layer And Pad U2-12(-1528.331mil,-973.843mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=4035.327mil|Location2.Y=4042.577mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=4035.327mil|Location2.Y=4042.577mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-12(-1528.331mil,-973.843mil) on Top Layer And Pad U2-13(-1528.33mil,-948.252mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=4060.918mil|Location2.Y=4068.168mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=4060.918mil|Location2.Y=4068.168mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-13(-1528.33mil,-948.252mil) on Top Layer And Pad U2-14(-1528.331mil,-922.662mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=4060.918mil|Location2.Y=4068.168mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=4060.918mil|Location2.Y=4068.168mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-15(-1819.669mil,-922.662mil) on Top Layer And Pad U2-16(-1819.669mil,-948.252mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=4035.327mil|Location2.Y=4042.577mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=4035.327mil|Location2.Y=4042.577mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-16(-1819.669mil,-948.252mil) on Top Layer And Pad U2-17(-1819.669mil,-973.843mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=4009.737mil|Location2.Y=4016.987mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=4009.737mil|Location2.Y=4016.987mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-17(-1819.669mil,-973.843mil) on Top Layer And Pad U2-18(-1819.669mil,-999.433mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3984.146mil|Location2.Y=3991.396mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3984.146mil|Location2.Y=3991.396mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-18(-1819.669mil,-999.433mil) on Top Layer And Pad U2-19(-1819.669mil,-1025.024mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3958.556mil|Location2.Y=3965.806mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3958.556mil|Location2.Y=3965.806mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-19(-1819.669mil,-1025.024mil) on Top Layer And Pad U2-20(-1819.669mil,-1050.615mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3779.422mil|Location2.Y=3786.672mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3779.422mil|Location2.Y=3786.672mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-2(-1528.331mil,-1229.748mil) on Top Layer And Pad U2-3(-1528.331mil,-1204.158mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3932.965mil|Location2.Y=3940.215mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3932.965mil|Location2.Y=3940.215mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-20(-1819.669mil,-1050.615mil) on Top Layer And Pad U2-21(-1819.669mil,-1076.205mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3907.375mil|Location2.Y=3914.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3907.375mil|Location2.Y=3914.625mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-21(-1819.669mil,-1076.205mil) on Top Layer And Pad U2-22(-1819.669mil,-1101.796mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3881.784mil|Location2.Y=3889.034mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3881.784mil|Location2.Y=3889.034mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-22(-1819.669mil,-1101.796mil) on Top Layer And Pad U2-23(-1819.669mil,-1127.386mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3856.193mil|Location2.Y=3863.443mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3856.193mil|Location2.Y=3863.443mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-23(-1819.669mil,-1127.386mil) on Top Layer And Pad U2-24(-1819.669mil,-1152.977mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3830.603mil|Location2.Y=3837.853mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3830.603mil|Location2.Y=3837.853mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-24(-1819.669mil,-1152.977mil) on Top Layer And Pad U2-25(-1819.669mil,-1178.567mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3805.012mil|Location2.Y=3812.262mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3805.012mil|Location2.Y=3812.262mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-25(-1819.669mil,-1178.567mil) on Top Layer And Pad U2-26(-1819.669mil,-1204.158mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3779.422mil|Location2.Y=3786.672mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3779.422mil|Location2.Y=3786.672mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-26(-1819.669mil,-1204.158mil) on Top Layer And Pad U2-27(-1819.669mil,-1229.748mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3753.831mil|Location2.Y=3761.081mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5148.655mil|Location2.X=5155.905mil|Location1.Y=3753.831mil|Location2.Y=3761.081mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-27(-1819.669mil,-1229.748mil) on Top Layer And Pad U2-28(-1819.669mil,-1255.339mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3805.012mil|Location2.Y=3812.262mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3805.012mil|Location2.Y=3812.262mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-3(-1528.331mil,-1204.158mil) on Top Layer And Pad U2-4(-1528.331mil,-1178.567mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3830.603mil|Location2.Y=3837.853mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3830.603mil|Location2.Y=3837.853mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-4(-1528.331mil,-1178.567mil) on Top Layer And Pad U2-5(-1528.331mil,-1152.977mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3856.193mil|Location2.Y=3863.443mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3856.193mil|Location2.Y=3863.443mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-5(-1528.331mil,-1152.977mil) on Top Layer And Pad U2-6(-1528.331mil,-1127.386mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3881.784mil|Location2.Y=3889.034mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3881.784mil|Location2.Y=3889.034mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-6(-1528.331mil,-1127.386mil) on Top Layer And Pad U2-7(-1528.331mil,-1101.796mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3907.375mil|Location2.Y=3914.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3907.375mil|Location2.Y=3914.625mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-7(-1528.331mil,-1101.796mil) on Top Layer And Pad U2-8(-1528.331mil,-1076.205mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3932.965mil|Location2.Y=3940.215mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5439.993mil|Location2.X=5447.243mil|Location1.Y=3932.965mil|Location2.Y=3940.215mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.874mil &lt; 6mil) Between Pad U2-8(-1528.331mil,-1076.205mil) on Top Layer And Pad U2-9(-1528.331mil,-1050.615mil) on Top Layer [Top Solder] Mask Sliver [4.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=4050.107mil|Location2.Y=4057.357mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=4050.107mil|Location2.Y=4057.357mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-1(-1074.756mil,-936.425mil) on Top Layer And Pad U3-2(-1074.756mil,-956.11mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3872.942mil|Location2.Y=3880.192mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3872.942mil|Location2.Y=3880.192mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-10(-1074.756mil,-1113.591mil) on Top Layer And Pad U3-11(-1074.756mil,-1133.276mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3892.627mil|Location2.Y=3899.877mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3892.627mil|Location2.Y=3899.877mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-10(-1074.756mil,-1113.591mil) on Top Layer And Pad U3-9(-1074.756mil,-1093.906mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3853.257mil|Location2.Y=3860.507mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3853.257mil|Location2.Y=3860.507mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-11(-1074.756mil,-1133.276mil) on Top Layer And Pad U3-12(-1074.756mil,-1152.961mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3833.572mil|Location2.Y=3840.822mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3833.572mil|Location2.Y=3840.822mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-12(-1074.756mil,-1152.961mil) on Top Layer And Pad U3-13(-1074.756mil,-1172.646mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3813.887mil|Location2.Y=3821.137mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3813.887mil|Location2.Y=3821.137mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-13(-1074.756mil,-1172.646mil) on Top Layer And Pad U3-14(-1074.756mil,-1192.331mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3794.202mil|Location2.Y=3801.452mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3794.202mil|Location2.Y=3801.452mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-14(-1074.756mil,-1192.331mil) on Top Layer And Pad U3-15(-1074.756mil,-1212.016mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3774.517mil|Location2.Y=3781.767mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3774.517mil|Location2.Y=3781.767mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-15(-1074.756mil,-1212.016mil) on Top Layer And Pad U3-16(-1074.756mil,-1231.701mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6010.202mil|Location2.X=6017.452mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6010.202mil|Location2.X=6017.452mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-17(-996.016mil,-1310.441mil) on Top Layer And Pad U3-18(-976.331mil,-1310.441mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6029.887mil|Location2.X=6037.137mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6029.887mil|Location2.X=6037.137mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-18(-976.331mil,-1310.441mil) on Top Layer And Pad U3-19(-956.646mil,-1310.441mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6049.572mil|Location2.X=6056.822mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6049.572mil|Location2.X=6056.822mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-19(-956.646mil,-1310.441mil) on Top Layer And Pad U3-20(-936.961mil,-1310.441mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=4030.422mil|Location2.Y=4037.672mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=4030.422mil|Location2.Y=4037.672mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-2(-1074.756mil,-956.11mil) on Top Layer And Pad U3-3(-1074.756mil,-975.795mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6069.257mil|Location2.X=6076.507mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6069.257mil|Location2.X=6076.507mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-20(-936.961mil,-1310.441mil) on Top Layer And Pad U3-21(-917.276mil,-1310.441mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6088.942mil|Location2.X=6096.192mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6088.942mil|Location2.X=6096.192mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-21(-917.276mil,-1310.441mil) on Top Layer And Pad U3-22(-897.591mil,-1310.441mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6108.627mil|Location2.X=6115.877mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6108.627mil|Location2.X=6115.877mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-22(-897.591mil,-1310.441mil) on Top Layer And Pad U3-23(-877.905mil,-1310.441mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6128.312mil|Location2.X=6135.562mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6128.312mil|Location2.X=6135.562mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-23(-877.905mil,-1310.441mil) on Top Layer And Pad U3-24(-858.221mil,-1310.441mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6147.997mil|Location2.X=6155.247mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6147.997mil|Location2.X=6155.247mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-24(-858.221mil,-1310.441mil) on Top Layer And Pad U3-25(-838.535mil,-1310.441mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6167.682mil|Location2.X=6174.932mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6167.682mil|Location2.X=6174.932mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-25(-838.535mil,-1310.441mil) on Top Layer And Pad U3-26(-818.85mil,-1310.441mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6187.367mil|Location2.X=6194.617mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6187.367mil|Location2.X=6194.617mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-26(-818.85mil,-1310.441mil) on Top Layer And Pad U3-27(-799.165mil,-1310.441mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6207.052mil|Location2.X=6214.302mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6207.052mil|Location2.X=6214.302mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-27(-799.165mil,-1310.441mil) on Top Layer And Pad U3-28(-779.48mil,-1310.441mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6226.737mil|Location2.X=6233.987mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6226.737mil|Location2.X=6233.987mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-28(-779.48mil,-1310.441mil) on Top Layer And Pad U3-29(-759.795mil,-1310.441mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6246.422mil|Location2.X=6253.672mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6246.422mil|Location2.X=6253.672mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-29(-759.795mil,-1310.441mil) on Top Layer And Pad U3-30(-740.11mil,-1310.441mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=4010.737mil|Location2.Y=4017.987mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=4010.737mil|Location2.Y=4017.987mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-3(-1074.756mil,-975.795mil) on Top Layer And Pad U3-4(-1074.756mil,-995.48mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6266.107mil|Location2.X=6273.357mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6266.107mil|Location2.X=6273.357mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-30(-740.11mil,-1310.441mil) on Top Layer And Pad U3-31(-720.425mil,-1310.441mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6285.792mil|Location2.X=6293.042mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6285.792mil|Location2.X=6293.042mil|Location1.Y=3665.265mil|Location2.Y=3672.515mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-31(-720.425mil,-1310.441mil) on Top Layer And Pad U3-32(-700.74mil,-1310.441mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3774.517mil|Location2.Y=3781.767mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3774.517mil|Location2.Y=3781.767mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-33(-622mil,-1231.701mil) on Top Layer And Pad U3-34(-622mil,-1212.016mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3794.202mil|Location2.Y=3801.452mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3794.202mil|Location2.Y=3801.452mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-34(-622mil,-1212.016mil) on Top Layer And Pad U3-35(-622mil,-1192.331mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3813.887mil|Location2.Y=3821.137mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3813.887mil|Location2.Y=3821.137mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-35(-622mil,-1192.331mil) on Top Layer And Pad U3-36(-622mil,-1172.646mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3833.572mil|Location2.Y=3840.822mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3833.572mil|Location2.Y=3840.822mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-36(-622mil,-1172.646mil) on Top Layer And Pad U3-37(-622mil,-1152.961mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3853.257mil|Location2.Y=3860.507mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3853.257mil|Location2.Y=3860.507mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-37(-622mil,-1152.961mil) on Top Layer And Pad U3-38(-622mil,-1133.276mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3872.942mil|Location2.Y=3880.192mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3872.942mil|Location2.Y=3880.192mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-38(-622mil,-1133.276mil) on Top Layer And Pad U3-39(-622mil,-1113.591mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3892.627mil|Location2.Y=3899.877mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3892.627mil|Location2.Y=3899.877mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-39(-622mil,-1113.591mil) on Top Layer And Pad U3-40(-622mil,-1093.906mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3991.052mil|Location2.Y=3998.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3991.052mil|Location2.Y=3998.302mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-4(-1074.756mil,-995.48mil) on Top Layer And Pad U3-5(-1074.756mil,-1015.165mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3912.312mil|Location2.Y=3919.562mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3912.312mil|Location2.Y=3919.562mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-40(-622mil,-1093.906mil) on Top Layer And Pad U3-41(-622mil,-1074.22mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3931.997mil|Location2.Y=3939.247mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3931.997mil|Location2.Y=3939.247mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-41(-622mil,-1074.22mil) on Top Layer And Pad U3-42(-622mil,-1054.535mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3951.682mil|Location2.Y=3958.932mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3951.682mil|Location2.Y=3958.932mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-42(-622mil,-1054.535mil) on Top Layer And Pad U3-43(-622mil,-1034.851mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3971.367mil|Location2.Y=3978.617mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3971.367mil|Location2.Y=3978.617mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-43(-622mil,-1034.851mil) on Top Layer And Pad U3-44(-622mil,-1015.165mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3991.052mil|Location2.Y=3998.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=3991.052mil|Location2.Y=3998.302mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-44(-622mil,-1015.165mil) on Top Layer And Pad U3-45(-622mil,-995.48mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=4010.737mil|Location2.Y=4017.987mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=4010.737mil|Location2.Y=4017.987mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-45(-622mil,-995.48mil) on Top Layer And Pad U3-46(-622mil,-975.795mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=4030.422mil|Location2.Y=4037.672mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=4030.422mil|Location2.Y=4037.672mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-46(-622mil,-975.795mil) on Top Layer And Pad U3-47(-622mil,-956.11mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=4050.107mil|Location2.Y=4057.357mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6353.706mil|Location2.X=6360.956mil|Location1.Y=4050.107mil|Location2.Y=4057.357mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-47(-622mil,-956.11mil) on Top Layer And Pad U3-48(-622mil,-936.425mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6285.792mil|Location2.X=6293.042mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6285.792mil|Location2.X=6293.042mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-49(-700.74mil,-857.685mil) on Top Layer And Pad U3-50(-720.425mil,-857.685mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3971.367mil|Location2.Y=3978.617mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3971.367mil|Location2.Y=3978.617mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-5(-1074.756mil,-1015.165mil) on Top Layer And Pad U3-6(-1074.756mil,-1034.851mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6266.107mil|Location2.X=6273.357mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6266.107mil|Location2.X=6273.357mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-50(-720.425mil,-857.685mil) on Top Layer And Pad U3-51(-740.11mil,-857.685mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6246.422mil|Location2.X=6253.672mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6246.422mil|Location2.X=6253.672mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-51(-740.11mil,-857.685mil) on Top Layer And Pad U3-52(-759.795mil,-857.685mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6226.737mil|Location2.X=6233.987mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6226.737mil|Location2.X=6233.987mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-52(-759.795mil,-857.685mil) on Top Layer And Pad U3-53(-779.48mil,-857.685mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6207.052mil|Location2.X=6214.302mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6207.052mil|Location2.X=6214.302mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-53(-779.48mil,-857.685mil) on Top Layer And Pad U3-54(-799.165mil,-857.685mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6187.367mil|Location2.X=6194.617mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6187.367mil|Location2.X=6194.617mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-54(-799.165mil,-857.685mil) on Top Layer And Pad U3-55(-818.85mil,-857.685mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6167.682mil|Location2.X=6174.932mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6167.682mil|Location2.X=6174.932mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-55(-818.85mil,-857.685mil) on Top Layer And Pad U3-56(-838.535mil,-857.685mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6147.997mil|Location2.X=6155.247mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6147.997mil|Location2.X=6155.247mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-56(-838.535mil,-857.685mil) on Top Layer And Pad U3-57(-858.221mil,-857.685mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6128.312mil|Location2.X=6135.562mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6128.312mil|Location2.X=6135.562mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-57(-858.221mil,-857.685mil) on Top Layer And Pad U3-58(-877.905mil,-857.685mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6108.627mil|Location2.X=6115.877mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6108.627mil|Location2.X=6115.877mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-58(-877.905mil,-857.685mil) on Top Layer And Pad U3-59(-897.591mil,-857.685mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6088.942mil|Location2.X=6096.192mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6088.942mil|Location2.X=6096.192mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-59(-897.591mil,-857.685mil) on Top Layer And Pad U3-60(-917.276mil,-857.685mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3951.682mil|Location2.Y=3958.932mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3951.682mil|Location2.Y=3958.932mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-6(-1074.756mil,-1034.851mil) on Top Layer And Pad U3-7(-1074.756mil,-1054.535mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6069.257mil|Location2.X=6076.507mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6069.257mil|Location2.X=6076.507mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-60(-917.276mil,-857.685mil) on Top Layer And Pad U3-61(-936.961mil,-857.685mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6049.572mil|Location2.X=6056.822mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6049.572mil|Location2.X=6056.822mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-61(-936.961mil,-857.685mil) on Top Layer And Pad U3-62(-956.646mil,-857.685mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6029.887mil|Location2.X=6037.137mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6029.887mil|Location2.X=6037.137mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-62(-956.646mil,-857.685mil) on Top Layer And Pad U3-63(-976.331mil,-857.685mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6010.202mil|Location2.X=6017.452mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6010.202mil|Location2.X=6017.452mil|Location1.Y=4118.021mil|Location2.Y=4125.271mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-63(-976.331mil,-857.685mil) on Top Layer And Pad U3-64(-996.016mil,-857.685mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3931.997mil|Location2.Y=3939.247mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3931.997mil|Location2.Y=3939.247mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-7(-1074.756mil,-1054.535mil) on Top Layer And Pad U3-8(-1074.756mil,-1074.22mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3912.312mil|Location2.Y=3919.562mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5900.95mil|Location2.X=5908.2mil|Location1.Y=3912.312mil|Location2.Y=3919.562mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U3-8(-1074.756mil,-1074.22mil) on Top Layer And Pad U3-9(-1074.756mil,-1093.906mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5068.969mil|Location2.X=5076.219mil|Location1.Y=2907.562mil|Location2.Y=2914.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5068.969mil|Location2.X=5076.219mil|Location1.Y=2907.562mil|Location2.Y=2914.812mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U7-1(-1908.213mil,-2076.017mil) on Top Layer And Pad U7-2(-1908.213mil,-2101.608mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5068.969mil|Location2.X=5076.219mil|Location1.Y=2881.972mil|Location2.Y=2889.222mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5068.969mil|Location2.X=5076.219mil|Location1.Y=2881.972mil|Location2.Y=2889.222mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U7-2(-1908.213mil,-2101.608mil) on Top Layer And Pad U7-3(-1908.213mil,-2127.199mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5068.969mil|Location2.X=5076.219mil|Location1.Y=2856.381mil|Location2.Y=2863.631mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5068.969mil|Location2.X=5076.219mil|Location1.Y=2856.381mil|Location2.Y=2863.631mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U7-3(-1908.213mil,-2127.199mil) on Top Layer And Pad U7-4(-1908.213mil,-2152.789mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5246.135mil|Location2.X=5253.385mil|Location1.Y=2856.381mil|Location2.Y=2863.631mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5246.135mil|Location2.X=5253.385mil|Location1.Y=2856.381mil|Location2.Y=2863.631mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U7-5(-1731.047mil,-2152.789mil) on Top Layer And Pad U7-6(-1731.047mil,-2127.199mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5246.135mil|Location2.X=5253.385mil|Location1.Y=2881.972mil|Location2.Y=2889.222mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5246.135mil|Location2.X=5253.385mil|Location1.Y=2881.972mil|Location2.Y=2889.222mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U7-6(-1731.047mil,-2127.199mil) on Top Layer And Pad U7-7(-1731.047mil,-2101.608mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5246.135mil|Location2.X=5253.385mil|Location1.Y=2907.562mil|Location2.Y=2914.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5246.135mil|Location2.X=5253.385mil|Location1.Y=2907.562mil|Location2.Y=2914.812mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U7-7(-1731.047mil,-2101.608mil) on Top Layer And Pad U7-8(-1731.047mil,-2076.017mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6276.69mil|Location2.X=6283.94mil|Location1.Y=3251.784mil|Location2.Y=3259.034mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6276.69mil|Location2.X=6283.94mil|Location1.Y=3251.784mil|Location2.Y=3259.034mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.78mil &lt; 6mil) Between Pad U8-1(-694.031mil,-1763.291mil) on Top Layer And Pad U8-2(-694.031mil,-1725.89mil) on Top Layer [Top Solder] Mask Sliver [5.78mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6276.69mil|Location2.X=6283.94mil|Location1.Y=3289.186mil|Location2.Y=3296.436mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6276.69mil|Location2.X=6283.94mil|Location1.Y=3289.186mil|Location2.Y=3296.436mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.779mil &lt; 6mil) Between Pad U8-2(-694.031mil,-1725.89mil) on Top Layer And Pad U8-3(-694.031mil,-1688.488mil) on Top Layer [Top Solder] Mask Sliver [5.779mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5080.788mil|Location2.X=5088.038mil|Location1.Y=3391.814mil|Location2.Y=3399.064mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5080.788mil|Location2.X=5088.038mil|Location1.Y=3391.814mil|Location2.Y=3399.064mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U9-1(-1896.394mil,-1591.766mil) on Top Layer And Pad U9-2(-1896.394mil,-1617.356mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5080.788mil|Location2.X=5088.038mil|Location1.Y=3366.224mil|Location2.Y=3373.474mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5080.788mil|Location2.X=5088.038mil|Location1.Y=3366.224mil|Location2.Y=3373.474mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U9-2(-1896.394mil,-1617.356mil) on Top Layer And Pad U9-3(-1896.394mil,-1642.947mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5080.788mil|Location2.X=5088.038mil|Location1.Y=3340.633mil|Location2.Y=3347.883mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5080.788mil|Location2.X=5088.038mil|Location1.Y=3340.633mil|Location2.Y=3347.883mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U9-3(-1896.394mil,-1642.947mil) on Top Layer And Pad U9-4(-1896.394mil,-1668.537mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5257.953mil|Location2.X=5265.203mil|Location1.Y=3340.633mil|Location2.Y=3347.883mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5257.953mil|Location2.X=5265.203mil|Location1.Y=3340.633mil|Location2.Y=3347.883mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U9-5(-1719.228mil,-1668.537mil) on Top Layer And Pad U9-6(-1719.229mil,-1642.947mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5257.953mil|Location2.X=5265.203mil|Location1.Y=3366.224mil|Location2.Y=3373.474mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5257.953mil|Location2.X=5265.203mil|Location1.Y=3366.224mil|Location2.Y=3373.474mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U9-6(-1719.229mil,-1642.947mil) on Top Layer And Pad U9-7(-1719.228mil,-1617.356mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5257.954mil|Location2.X=5265.204mil|Location1.Y=3391.814mil|Location2.Y=3399.064mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5257.954mil|Location2.X=5265.204mil|Location1.Y=3391.814mil|Location2.Y=3399.064mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.874mil &lt; 6mil) Between Pad U9-7(-1719.228mil,-1617.356mil) on Top Layer And Pad U9-8(-1719.228mil,-1591.765mil) on Top Layer [Top Solder] Mask Sliver [5.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6852.792mil|Location2.X=6860.042mil|Location1.Y=2403.95mil|Location2.Y=2411.2mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6852.792mil|Location2.X=6860.042mil|Location1.Y=2403.95mil|Location2.Y=2411.2mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.874mil &lt; 6mil) Between Pad USB_CHG-1(-160.315mil,-2578.614mil) on Top Layer And Pad USB_CHG-14(-143.583mil,-2606.173mil) on Multi-Layer [Top Solder] Mask Sliver [3.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6805.485mil|Location2.X=6812.735mil|Location1.Y=2430.556mil|Location2.Y=2437.806mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6805.485mil|Location2.X=6812.735mil|Location1.Y=2430.556mil|Location2.Y=2437.806mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 6mil) Between Pad USB_CHG-1(-160.315mil,-2578.614mil) on Top Layer And Pad USB_CHG-2(-160.315mil,-2553.024mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6852.792mil|Location2.X=6860.042mil|Location1.Y=2533.934mil|Location2.Y=2541.184mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6852.792mil|Location2.X=6860.042mil|Location1.Y=2533.934mil|Location2.Y=2541.184mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.874mil &lt; 6mil) Between Pad USB_CHG-15(-143.583mil,-2448.693mil) on Multi-Layer And Pad USB_CHG-5(-160.315mil,-2476.252mil) on Top Layer [Top Solder] Mask Sliver [3.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6805.485mil|Location2.X=6812.735mil|Location1.Y=2456.146mil|Location2.Y=2463.396mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6805.485mil|Location2.X=6812.735mil|Location1.Y=2456.146mil|Location2.Y=2463.396mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 6mil) Between Pad USB_CHG-2(-160.315mil,-2553.024mil) on Top Layer And Pad USB_CHG-3(-160.315mil,-2527.433mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6805.485mil|Location2.X=6812.735mil|Location1.Y=2481.737mil|Location2.Y=2488.987mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6805.485mil|Location2.X=6812.735mil|Location1.Y=2481.737mil|Location2.Y=2488.987mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 6mil) Between Pad USB_CHG-3(-160.315mil,-2527.433mil) on Top Layer And Pad USB_CHG-4(-160.315mil,-2501.843mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6805.485mil|Location2.X=6812.735mil|Location1.Y=2507.327mil|Location2.Y=2514.577mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6805.485mil|Location2.X=6812.735mil|Location1.Y=2507.327mil|Location2.Y=2514.577mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 6mil) Between Pad USB_CHG-4(-160.315mil,-2501.843mil) on Top Layer And Pad USB_CHG-5(-160.315mil,-2476.252mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6853.745mil|Location2.X=6860.995mil|Location1.Y=3940.288mil|Location2.Y=3947.538mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6853.745mil|Location2.X=6860.995mil|Location1.Y=3940.288mil|Location2.Y=3947.538mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.874mil &lt; 6mil) Between Pad USB_IN-1(-159.362mil,-1042.276mil) on Top Layer And Pad USB_IN-14(-142.63mil,-1069.835mil) on Multi-Layer [Top Solder] Mask Sliver [3.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6806.438mil|Location2.X=6813.688mil|Location1.Y=3966.895mil|Location2.Y=3974.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6806.438mil|Location2.X=6813.688mil|Location1.Y=3966.895mil|Location2.Y=3974.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 6mil) Between Pad USB_IN-1(-159.362mil,-1042.276mil) on Top Layer And Pad USB_IN-2(-159.362mil,-1016.685mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6853.745mil|Location2.X=6860.995mil|Location1.Y=4070.273mil|Location2.Y=4077.523mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6853.745mil|Location2.X=6860.995mil|Location1.Y=4070.273mil|Location2.Y=4077.523mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.874mil &lt; 6mil) Between Pad USB_IN-15(-142.63mil,-912.354mil) on Multi-Layer And Pad USB_IN-5(-159.362mil,-939.914mil) on Top Layer [Top Solder] Mask Sliver [3.874mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6806.438mil|Location2.X=6813.688mil|Location1.Y=3992.485mil|Location2.Y=3999.735mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6806.438mil|Location2.X=6813.688mil|Location1.Y=3992.485mil|Location2.Y=3999.735mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 6mil) Between Pad USB_IN-2(-159.362mil,-1016.685mil) on Top Layer And Pad USB_IN-3(-159.362mil,-991.095mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6806.438mil|Location2.X=6813.688mil|Location1.Y=4018.076mil|Location2.Y=4025.326mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6806.438mil|Location2.X=6813.688mil|Location1.Y=4018.076mil|Location2.Y=4025.326mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 6mil) Between Pad USB_IN-3(-159.362mil,-991.095mil) on Top Layer And Pad USB_IN-4(-159.362mil,-965.504mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6806.438mil|Location2.X=6813.688mil|Location1.Y=4043.666mil|Location2.Y=4050.916mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\USB_Audio\Hardware\BluePitch.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6806.438mil|Location2.X=6813.688mil|Location1.Y=4043.666mil|Location2.Y=4050.916mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.842mil &lt; 6mil) Between Pad USB_IN-4(-159.362mil,-965.504mil) on Top Layer And Pad USB_IN-5(-159.362mil,-939.914mil) on Top Layer [Top Solder] Mask Sliver [1.842mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
