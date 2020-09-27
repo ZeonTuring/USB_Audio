@@ -1,7 +1,7 @@
+
+**** 03/26/20 22:29:06 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
 
-**** 02/03/20 11:02:46 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
-
- ** Profile: "SCHEMATIC1-Test_1"  [ d:\usb_audio\hardware\simulation\usb_audio-pspicefiles\schematic1\test_1.sim ] 
+ ** Profile: "SCHEMATIC1-Test_1"  [ D:\USB_Audio\Hardware\Simulation\usb_audio-pspicefiles\schematic1\test_1.sim ] 
 
 
  ****     CIRCUIT DESCRIPTION
@@ -31,33 +31,35 @@
 
 **** INCLUDING SCHEMATIC1.net ****
 * source USB_AUDIO
-E_U1         N00826 0 VALUE {LIMIT(V(0,N00742)*1E6,-15V,+15V)}
-E_U2         N00779 0 VALUE {LIMIT(V(0,N00735)*1E6,-15V,+15V)}
+E_U1         N00826 0 VALUE {LIMIT(V(0,N00744)*1E6,-15V,+15V)}
+E_U2         N00779 0 VALUE {LIMIT(V(0,N00737)*1E6,-15V,+15V)}
 E_U3         N00917 0 VALUE {LIMIT(V(N00903,N00912)*1E6,-15V,+15V)}
-R_R1         N00742 N00826  620 TC=0,0 
-R_R2         N00735 N00779  620 TC=0,0 
+R_R1         N00744 N00826  620 TC=0,0 
+R_R2         N00737 N00779  620 TC=0,0 
 R_R3         N00813 N00912  620 TC=0,0 
 R_R4         0 N00886  620 TC=0,0 
 R_R5         N00886 N00903  620 TC=0,0 
 R_R6         N00779 N00813  680 TC=0,0 
 R_R7         N00826 N00886  680 TC=0,0 
-C_C1         N00742 N00826  2.2n  TC=0,0 
-C_C2         N00735 N00779  2.2n  TC=0,0 
+C_C1         N00744 N00826  2.2n  TC=0,0 
+C_C2         N00737 N00779  2.2n  TC=0,0 
 R_R9         N00813 N00917  620 TC=0,0 
-I_I2         N00742 N00735 DC 0Adc AC 4mAac
-+SIN 0 4m 1k 0 0 0
 C_C3         N00886 N00813  6.8n  TC=0,0 
 C_C5         N00912 N00917  2.2n  TC=0,0 
 C_C4         0 N00903  2.2n  TC=0,0 
 R_R10         N00917 N074000  150 TC=0,0 
 R_R11         0 N074000  16 TC=0,0 
+I_I2         N00737 0 DC 0Adc AC 2mAac
++SIN 0 2m 1k 0 0 0
+I_I3         N00744 0 DC 0Adc AC 2mAac
++SIN 0 2m 1k 0 0 0
 
 **** RESUMING Test_1.cir ****
 .END
 
-**** 02/03/20 11:02:46 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+**** 03/26/20 22:29:06 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-Test_1"  [ d:\usb_audio\hardware\simulation\usb_audio-pspicefiles\schematic1\test_1.sim ] 
+ ** Profile: "SCHEMATIC1-Test_1"  [ D:\USB_Audio\Hardware\Simulation\usb_audio-pspicefiles\schematic1\test_1.sim ] 
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -70,7 +72,7 @@ R_R11         0 N074000  16 TC=0,0
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N00735)    0.0000 (N00742)    0.0000 (N00779)    0.0000 (N00813)    0.0000     
+(N00737)    0.0000 (N00744)    0.0000 (N00779)    0.0000 (N00813)    0.0000     
 
 (N00826)    0.0000 (N00886)    0.0000 (N00903)    0.0000 (N00912)    0.0000     
 
@@ -89,9 +91,9 @@ R_R11         0 N074000  16 TC=0,0
 
           JOB CONCLUDED
 
-**** 02/03/20 11:02:46 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+**** 03/26/20 22:29:06 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-Test_1"  [ d:\usb_audio\hardware\simulation\usb_audio-pspicefiles\schematic1\test_1.sim ] 
+ ** Profile: "SCHEMATIC1-Test_1"  [ D:\USB_Audio\Hardware\Simulation\usb_audio-pspicefiles\schematic1\test_1.sim ] 
 
 
  ****     JOB STATISTICS SUMMARY
@@ -101,5 +103,5 @@ R_R11         0 N074000  16 TC=0,0
 
 
 
-  Total job time (using Solver 1)   =         .03
+  Total job time (using Solver 1)   =         .02
 

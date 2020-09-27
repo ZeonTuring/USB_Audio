@@ -1528,8 +1528,8 @@ void HAL_I2S_IRQHandler(I2S_HandleTypeDef *hi2s)
 __weak void HAL_I2S_TxHalfCpltCallback(I2S_HandleTypeDef *hi2s)
 {
   /* Prevent unused argument(s) compilation warning */
+  UNUSED(hi2s);
 
-	HalfTransfer_CallBack_FS();
   /* NOTE : This function Should not be modified, when the callback is needed,
             the HAL_I2S_TxHalfCpltCallback could be implemented in the user file
    */
@@ -1544,7 +1544,7 @@ __weak void HAL_I2S_TxHalfCpltCallback(I2S_HandleTypeDef *hi2s)
 __weak void HAL_I2S_TxCpltCallback(I2S_HandleTypeDef *hi2s)
 {
   /* Prevent unused argument(s) compilation warning */
-	TransferComplete_CallBack_FS();
+  UNUSED(hi2s);
 
   /* NOTE : This function Should not be modified, when the callback is needed,
             the HAL_I2S_TxCpltCallback could be implemented in the user file

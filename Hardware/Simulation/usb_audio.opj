@@ -16,6 +16,9 @@
   (Folder "Referenced Projects")
   (MPSSessionName "zeont")
   (PartMRUSelector
+    (0
+      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
     (VAC
       (FullPartName "VAC.Normal")
       (LibraryName
@@ -35,9 +38,6 @@
       (FullPartName "ISIN.Normal")
       (LibraryName
          "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
-      (DeviceIndex "0"))
-    (0
-      (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
     (GND
       (LibraryName "C:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
@@ -60,12 +60,7 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" "d:\usb_audio\hardware\simulation\usb_audio.dsn")
-      (Path "Design Resources" "d:\usb_audio\hardware\simulation\usb_audio.dsn"
-         "SCHEMATIC1")
-      (Path "Outputs")
-      (Select "Design Resources"
-         "d:\usb_audio\hardware\simulation\usb_audio.dsn" "Design Cache"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -76,7 +71,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 2 3 -1 -1 -8 -31 182 1460 182 609")
-        (Scroll "95 231")
+        (Scroll "0 161")
         (Zoom "158")
         (Occurrence "/"))
       (Path "D:\USB_AUDIO\HARDWARE\SIMULATION\USB_AUDIO.DSN")
